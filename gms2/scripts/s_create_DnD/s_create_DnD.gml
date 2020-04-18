@@ -42,10 +42,10 @@ for(P= 0; P <= 63; P++) {
 	/// @DnDArgument : "ypos" "Y"
 	/// @DnDArgument : "var" "BoardPiece"
 	/// @DnDArgument : "var_temp" "1"
-	/// @DnDArgument : "objectid" "o_segment"
+	/// @DnDArgument : "objectid" "o_cell"
 	/// @DnDArgument : "layer" ""Pieces""
 	/// @DnDSaveInfo : "objectid" "1db76b82-9ba6-4e87-87c2-3fa44f9f78c3"
-	var BoardPiece = instance_create_layer(X, Y, "Pieces", o_segment);
+	var BoardPiece = instance_create_layer(X, Y, "Pieces", o_cell);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -63,20 +63,6 @@ for(P= 0; P <= 63; P++) {
 	var l67CAD9AD_0 = BoardPiece.ID;
 	switch(l67CAD9AD_0)
 	{
-		/// @DnDAction : YoYo Games.Switch.Case
-		/// @DnDVersion : 1
-		/// @DnDHash : 6B69A86D
-		/// @DnDParent : 67CAD9AD
-		/// @DnDArgument : "const" ""default""
-		case "default":
-			/// @DnDAction : YoYo Games.Common.Variable
-			/// @DnDVersion : 1
-			/// @DnDHash : 18C24371
-			/// @DnDParent : 6B69A86D
-			/// @DnDArgument : "var" "BoardPiece.Piece_ID"
-			BoardPiece.Piece_ID = 0;
-			break;
-	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 279BA9AA
@@ -666,6 +652,20 @@ for(P= 0; P <= 63; P++) {
 			/// @DnDArgument : "var_1" "BoardPiece.Color"
 			BoardPiece.Piece_ID = 1;
 			BoardPiece.Color = "White";
+			break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 6B69A86D
+		/// @DnDParent : 67CAD9AD
+		/// @DnDArgument : "const" ""default""
+		case "default":
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 18C24371
+			/// @DnDParent : 6B69A86D
+			/// @DnDArgument : "var" "BoardPiece.Piece_ID"
+			BoardPiece.Piece_ID = 0;
 			break;
 	}
 }
