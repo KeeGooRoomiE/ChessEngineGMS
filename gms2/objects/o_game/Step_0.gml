@@ -8,5 +8,7 @@ script_execute(s_controller_step_GML);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 29CD7638
-/// @DnDArgument : "code" "mouse_string=global.Selected;"
+/// @DnDArgument : "code" "mouse_string=global.Selected;$(13_10)$(13_10)//keyboard_check_released(vk_space) = !global.Debug_Mode;$(13_10)"
 mouse_string=global.Selected;
+
+//keyboard_check_released(vk_space) = !global.Debug_Mode;

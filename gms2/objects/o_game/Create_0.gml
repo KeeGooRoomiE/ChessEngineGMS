@@ -65,5 +65,12 @@ global.Prev_Cell = 0;
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 24C5FB80
-/// @DnDArgument : "code" "mouse_string="";"
+/// @DnDArgument : "code" "mouse_string="";$(13_10)$(13_10)//trigger(set to true\false) variable global.Debug_Mode when we press Space button$(13_10)$(13_10)//1. Create a event for a pressing space button $(13_10)//1.1 Determine when we need to set it event $(13_10)//2. Create a if statement for a checking a global variable$(13_10)//3. Change global variable depends on the state of this variable"
 mouse_string="";
+
+//trigger(set to true\false) variable global.Debug_Mode when we press Space button
+
+//1. Create a event for a pressing space button 
+//1.1 Determine when we need to set it event 
+//2. Create a if statement for a checking a global variable
+//3. Change global variable depends on the state of this variable
