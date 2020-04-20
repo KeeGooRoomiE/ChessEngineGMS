@@ -223,14 +223,6 @@
             }
         },
         {
-            "Key": "77f6b9ea-814d-463f-aff2-da0fa510fbdd",
-            "Value": {
-                "id": "4273e99b-f2e9-48cf-b017-f0b3adfd776b",
-                "resourcePath": "objects\\obj_daddy\\obj_daddy.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "7a2c3325-ae07-4473-88f1-12a36b8c7750",
             "Value": {
                 "id": "9fdeb75d-1e5c-4b0a-808e-78904f79f12c",
@@ -311,14 +303,6 @@
             }
         },
         {
-            "Key": "9443bd2b-9bcc-48ec-ab73-4e8542f3af1e",
-            "Value": {
-                "id": "8335413a-91ae-443e-b6e5-f820aa505162",
-                "resourcePath": "objects\\object5\\object5.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "abdfeb33-c2ba-45d2-b403-2ddd0c740d1e",
             "Value": {
                 "id": "6f1a5787-cb3b-4c24-a460-a64bfe2cdc9d",
@@ -364,14 +348,6 @@
                 "id": "f2212189-d847-42cf-8f7b-6fb12eac58b1",
                 "resourcePath": "sprites\\Spr_Piece_King\\Spr_Piece_King.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "c61855e9-2a45-48be-8cec-fc6f32e1e334",
-            "Value": {
-                "id": "020cc15a-a29f-4943-ae3d-7533a60c4ec8",
-                "resourcePath": "objects\\obj_almost_child\\obj_almost_child.yy",
-                "resourceType": "GMObject"
             }
         },
         {
