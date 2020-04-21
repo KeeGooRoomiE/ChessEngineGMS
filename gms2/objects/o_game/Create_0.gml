@@ -65,7 +65,7 @@ global.Prev_Cell = 0;
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 24C5FB80
-/// @DnDArgument : "code" "mouse_string="";$(13_10)$(13_10)//trigger(set to true\false) variable global.Debug_Mode when we press Space button$(13_10)$(13_10)//1. Create a event for a pressing space button $(13_10)//1.1 Determine when we need to set it event $(13_10)//2. Create a if statement for a checking a global variable$(13_10)//3. Change global variable depends on the state of this variable"
+/// @DnDArgument : "code" "mouse_string="";$(13_10)$(13_10)//trigger(set to true\false) variable global.Debug_Mode when we press Space button$(13_10)$(13_10)//1. Create a event for a pressing space button $(13_10)//1.1 Determine when we need to set it event $(13_10)//2. Create a if statement for a checking a global variable$(13_10)//3. Change global variable depends on the state of this variable$(13_10)$(13_10)camera_size=512;$(13_10)$(13_10)view_wport[0]=camera_size;$(13_10)view_hport[0]=camera_size;$(13_10)$(13_10)//to determine what OS is running right now$(13_10)$(13_10)//1. use internal GMS constants and functions$(13_10)$(13_10)//2. determine input on OS$(13_10)// so if its a mouse = mouse_x and y will change without pressing LMB$(13_10)// if its a screen = changed mouse_x and y only with pressing LMB$(13_10)$(13_10)//3. determine aspect ratio $(13_10)// so if w>h = its a PC$(13_10)// if w<h = its a mobile$(13_10)$(13_10)$(13_10)"
 mouse_string="";
 
 //trigger(set to true\false) variable global.Debug_Mode when we press Space button
@@ -74,3 +74,20 @@ mouse_string="";
 //1.1 Determine when we need to set it event 
 //2. Create a if statement for a checking a global variable
 //3. Change global variable depends on the state of this variable
+
+camera_size=512;
+
+view_wport[0]=camera_size;
+view_hport[0]=camera_size;
+
+//to determine what OS is running right now
+
+//1. use internal GMS constants and functions
+
+//2. determine input on OS
+// so if its a mouse = mouse_x and y will change without pressing LMB
+// if its a screen = changed mouse_x and y only with pressing LMB
+
+//3. determine aspect ratio 
+// so if w>h = its a PC
+// if w<h = its a mobile

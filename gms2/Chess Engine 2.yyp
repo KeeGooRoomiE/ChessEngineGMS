@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "7ee52ee4-e0f7-49d3-8a46-6dda2ca0dec5",
+            "Value": {
+                "id": "96ff646a-ef8e-42e7-9684-ea61f69294c7",
+                "resourcePath": "objects\\o_cam\\o_cam.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "81820641-25b7-4e0f-be1a-dabc466be225",
             "Value": {
                 "id": "f192aac7-9465-4f8c-b126-721310faf488",
