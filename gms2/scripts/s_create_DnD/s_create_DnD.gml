@@ -42,10 +42,10 @@ for(P= 0; P <= 63; P++) {
 	/// @DnDArgument : "ypos" "Y"
 	/// @DnDArgument : "var" "BoardPiece"
 	/// @DnDArgument : "var_temp" "1"
-	/// @DnDArgument : "objectid" "o_cell"
+	/// @DnDArgument : "objectid" "obj_cell"
 	/// @DnDArgument : "layer" ""Pieces""
 	/// @DnDSaveInfo : "objectid" "1db76b82-9ba6-4e87-87c2-3fa44f9f78c3"
-	var BoardPiece = instance_create_layer(X, Y, "Pieces", o_cell);
+	var BoardPiece = instance_create_layer(X, Y, "Pieces", obj_cell);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
