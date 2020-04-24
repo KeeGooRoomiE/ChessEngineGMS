@@ -1,20 +1,14 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 0A6131E2
-/// @DnDArgument : "code" "///Draw $(13_10)$(13_10)//[HOMEWORK]$(13_10)$(13_10)//change Debug_Mode drawing elemets form pieces to text inside of cell$(13_10)//also will be good to left checking statement for the pieces itself inside of the if statement$(13_10)$(13_10)$(13_10)draw_self();$(13_10)draw_text(x,y,string(Piece_ID));$(13_10)draw_text(x,y+16,string(Color));$(13_10)$(13_10)if (!global.Debug_Mode) $(13_10){$(13_10)	if (Color = "White")$(13_10)	{$(13_10)		pieceSprite=spr_pieces_white;$(13_10)	};$(13_10)$(13_10)	if (Color = "Black")$(13_10)	{$(13_10)		pieceSprite=spr_black_pieces;$(13_10)	};$(13_10)$(13_10)$(13_10)	if (Color != "Grey")$(13_10)	{$(13_10)		draw_sprite(pieceSprite,0,x,y);$(13_10)	};$(13_10)}"
+/// @DnDArgument : "code" "///Draw $(13_10)$(13_10)//Drawing the colour of the cell$(13_10)draw_self();$(13_10)$(13_10)//drawing debug info or the pieces$(13_10)if (!global.Debug_Mode)				//if not in debug$(13_10){$(13_10)	if (Color = "White")$(13_10)	{$(13_10)		pieceSprite=spr_pieces_white;$(13_10)	};$(13_10)$(13_10)	if (Color = "Black")$(13_10)	{$(13_10)		pieceSprite=spr_black_pieces;$(13_10)	};$(13_10)$(13_10)$(13_10)	if (Color != "Grey")$(13_10)	{$(13_10)		draw_sprite(pieceSprite,Piece_ID,x,y);$(13_10)	};$(13_10)}$(13_10)else								//if in debug$(13_10){$(13_10)	draw_text(x,y,string(Piece_ID)); //type of pieces$(13_10)	draw_text(x,y+16,string(Color)); //colour $(13_10)	draw_text(x,y+32,string(BoardPos));//name of the position$(13_10)	draw_text(x,y+48,string(ID));		//number of cell at the board$(13_10)	$(13_10)}"
 ///Draw 
 
-//[HOMEWORK]
-
-//change Debug_Mode drawing elemets form pieces to text inside of cell
-//also will be good to left checking statement for the pieces itself inside of the if statement
-
-
+//Drawing the colour of the cell
 draw_self();
-draw_text(x,y,string(Piece_ID));
-draw_text(x,y+16,string(Color));
 
-if (!global.Debug_Mode) 
+//drawing debug info or the pieces
+if (!global.Debug_Mode)				//if not in debug
 {
 	if (Color = "White")
 	{
@@ -29,6 +23,14 @@ if (!global.Debug_Mode)
 
 	if (Color != "Grey")
 	{
-		draw_sprite(pieceSprite,0,x,y);
+		draw_sprite(pieceSprite,Piece_ID,x,y);
 	};
+}
+else								//if in debug
+{
+	draw_text(x,y,string(Piece_ID)); //type of pieces
+	draw_text(x,y+16,string(Color)); //colour 
+	draw_text(x,y+32,string(BoardPos));//name of the position
+	draw_text(x,y+48,string(ID));		//number of cell at the board
+	
 }
