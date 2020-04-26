@@ -72,40 +72,42 @@
 	//other.Color=global.Cell_Color;
 	//other.Piece_ID=global.Piece_Index;
 
-
-
-with (global.Prev_Cell)
-{
-	if (Color = "Grey" && other.Color != "Grey")
+take = false
+	if (Color = "Grey" && global.Cell_Color != "Grey")
 	{
-		Color = other.Color;
-		Piece_ID = other.Piece_ID;
-		other.Color=global.Cell_Color;
-		other.Piece_ID=global.Piece_Index;
+		Color = global.Cell_Color;
+		Piece_ID = global.Piece_Index;
+		take= true
 	}
-	else if (Color = "White" && other.Color = "Black")
+	else if (Color = "White" && global.Cell_Color = "Black")
 	{
-		Color = other.Color;
-		Piece_ID = other.Piece_ID;
-		other.Color=global.Cell_Color;
-		other.Piece_ID=global.Piece_Index;
-			}
-	else if (Color = "Black" && other.Color = "White")
+		Color = global.Cell_Color;
+		Piece_ID = global.Piece_Index;
+		take=true
+	}
+	else if (Color = "Black" && global.Cell_Color = "White")
 	{
-		Color = other.Color;
-		Piece_ID = other.Piece_ID;
-		other.Color=global.Cell_Color;
-		other.Piece_ID=global.Piece_Index;
-			}
+		Color = global.Cell_Color;
+		Piece_ID = global.Piece_Index;
+		take=true
+	}
 	else 
 	{}
-}
 	
+if take = true
+	{
+	with (global.Prev_Cell)
+	{
+		Color="Grey";
+		Piece_ID=-1;
+	}
+}
+
 	
 	
 //	switch (Color)
 //	{
-		
+	
 //	case (Color = "Grey" && other.Color = "Grey"):
 //		 break;
 //	case (Color = "Grey" && other.Color != "Grey"):
@@ -116,8 +118,6 @@ with (global.Prev_Cell)
 //		 break;
 //	case (Color = other.Color):
 //		 break;
-	
-		
 	
 //	};
 //}
