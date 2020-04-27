@@ -73,6 +73,10 @@
 	//other.Piece_ID=global.Piece_Index;
 
 take = false
+
+if (global.move=true)
+{
+
 	if (Color = "Grey" && global.Cell_Color != "Grey")
 	{
 		Color = global.Cell_Color;
@@ -91,9 +95,7 @@ take = false
 		Piece_ID = global.Piece_Index;
 		take=true
 	}
-	else 
-	{}
-	
+		
 if take = true
 	{
 	with (global.Prev_Cell)
@@ -102,24 +104,24 @@ if take = true
 		Piece_ID=-1;
 	}
 }
+global.move=false
+}
 
 	
+	//switch (Color)
+	//{
 	
-//	switch (Color)
-//	{
+	//case (Color = "Grey" && other.Color = "Grey"):
+	//	 break;
+	//case (Color = "Grey" && other.Color != "Grey"):
+	//	 Color = other.Color;
+	//	 Piece_ID = other.Piece_ID;
+	//	 break;
+	//case (Color != "Grey" && other.Color = "Grey"):
+	//	 break;
+	//case (Color = other.Color):
+	//	 break;
 	
-//	case (Color = "Grey" && other.Color = "Grey"):
-//		 break;
-//	case (Color = "Grey" && other.Color != "Grey"):
-//		 Color = other.Color;
-//		 Piece_ID = other.Piece_ID;
-//		 break;
-//	case (Color != "Grey" && other.Color = "Grey"):
-//		 break;
-//	case (Color = other.Color):
-//		 break;
-	
-//	};
-//}
+	//};
 	
 	
