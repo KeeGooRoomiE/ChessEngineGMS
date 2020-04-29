@@ -7,14 +7,13 @@
 
 
 
-//[HOMEWORK]
+//TODO:
 
-//1. reset naming for object reference
-//2.set variables to object 
-//3. double check the positions of collision
-//4. read in help about the collision_point \ line \ circle functions
-//5. Optional. Try to figure out what refactoring  can be set in this code
+//reset positions in functions to an array
 
+//pos[0,0]=x;
+//pos[0,1]=y;
+//...
 
 
 
@@ -34,7 +33,7 @@
 if argument0=0
 {
 
-    if Colour="Black"
+    if Color="Black"
 	{
         //common move
 		if (Moves>0)
@@ -45,6 +44,10 @@ if argument0=0
 			{
 				Returned.CanMove=true;
 			}
+			//else
+			//{
+			//	Returned.CanMove=false;
+			//}
 		};
         
              
@@ -72,40 +75,55 @@ if argument0=0
 
         //check for taking bottom right cell for allowing take out the piece
         Returned=collision_point(x+sprite_width+32,y+sprite_height+32,obj_cell,false,true);
-        if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour)
+        if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 		{
 			Returned.CanTake=true;
 		};
 
          //check for taking bottom left cell for allowing take out the piece
         Returned=collision_point(x-sprite_width/2,y+sprite_height+32,obj_cell,false,true);
-        if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour)
+        if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 		{
 			Returned.CanTake=true;
 		};
     }
 
     //White Moves
-    if Colour="White"{
-        if Moves>0{//Check to see if the pawn has not moved, and if it has not we will allowed it to move two segments in front of it instead of one.
+    if Color="White"
+	{
+        if Moves>0
+		{//Check to see if the pawn has not moved, and if it has not we will allowed it to move two segments in front of it instead of one.
             Returned=collision_point(x+sprite_width/2,y-sprite_height/2,obj_cell,false,true); //// |
             //Check one segment ahead
-            if Returned!=noone and Returned.Piece_ID=-1{Returned.CanMove=true}};
+            if Returned!=noone and Returned.Piece_ID=-1
+			{
+				Returned.CanMove=true
+			}
+		};
         {
             //Check two segment ahead
             Returned=collision_point(x+sprite_width/2,y-sprite_height/2,obj_cell,false,true);
-            if Returned!=noone and Returned.Piece_ID=-1{Returned.CanMove=true};
-            if Returned!=noone and Returned.Piece_ID=-1{
+            if Returned!=noone and Returned.Piece_ID=-1
+			{
+				Returned.CanMove=true
+			};
+            if Returned!=noone and Returned.Piece_ID=-1
+			{
                 Returned=collision_point(x+sprite_width/2,y-(sprite_height/2)*2,obj_cell,false,true);
-                if Returned!=noone and Returned.Piece_ID=-1 and Moves=0{Returned.CanMove=true}}}
+                if Returned!=noone and Returned.Piece_ID=-1 and Moves=0
+				{
+					Returned.CanMove=true
+				}
+			}
+		}
 
         //Take Right
         Returned=collision_point(x+sprite_width+32,y-sprite_height/2,obj_cell,false,true);
-        if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour{Returned.CanTake=true};
+        if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color{Returned.CanTake=true};
 
         //Take Left
         Returned=collision_point(x-sprite_width/2,y-sprite_height/2,obj_cell,false,true);
-        if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour{Returned.CanTake=true};
+        if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color{Returned.CanTake=true};
     }
 }
 
@@ -114,7 +132,7 @@ if argument0=0
 if argument0=1{//Check board and mark none safe areas
 
     //Black Moves
-    if Colour="Black"{
+    if Color="Black"{
 
         //Take Right
         Returned=collision_point(x+sprite_width+32,y+sprite_height+32,obj_cell,false,true);
@@ -126,7 +144,7 @@ if argument0=1{//Check board and mark none safe areas
     }
 
     //White Moves
-    if Colour="White"{
+    if Color="White"{
 
         //Take Right
         Returned=collision_point(x+sprite_width+32,y-sprite_height/2,obj_cell,false,true);

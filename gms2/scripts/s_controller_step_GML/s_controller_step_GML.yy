@@ -4,5 +4,5 @@
     "mvc": "1.0",
     "name": "s_controller_step_GML",
     "IsCompatibility": false,
-    "IsDnD": true
+    "IsDnD": false
 }
