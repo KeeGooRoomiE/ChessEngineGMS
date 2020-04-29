@@ -39,7 +39,7 @@ if argument0=0
         //common move
 		if (Moves>0)
 		{
-            Returned=collision_point(x+sprite_width/2,y+sprite_height+32,o_Segment,false,true);
+            Returned=collision_point(x+sprite_width/2,y+sprite_height+32,obj_cell,false,true);
             
             if (Returned!=noone and Returned.Piece_ID=-1)
 			{
@@ -51,7 +51,7 @@ if argument0=0
          {
            
 		   //moving to next cell
-            Returned=collision_point(x+sprite_width/2,y+sprite_height+32,o_Segment,false,true);
+            Returned=collision_point(x+sprite_width/2,y+sprite_height+32,obj_cell,false,true);
 			
             if (Returned!=noone and Returned.Piece_ID=-1)
 			{
@@ -62,7 +62,7 @@ if argument0=0
 			//first allowing to move in two cells next 
             if (Returned!=noone and Returned.Piece_ID=-1)
 			{
-                Returned=collision_point(x+sprite_width/2,y+sprite_height*2+3,o_Segment,false,true);
+                Returned=collision_point(x+sprite_width/2,y+sprite_height*2+3,obj_cell,false,true);
                 if (Returned!=noone and Returned.Piece_ID=-1 and Moves=0)
 				{
 					Returned.CanMove=true
@@ -71,15 +71,15 @@ if argument0=0
 		}
 
         //check for taking bottom right cell for allowing take out the piece
-        Returned=collision_point(x+sprite_width+32,y+sprite_height+32,o_Segment,false,true);
+        Returned=collision_point(x+sprite_width+32,y+sprite_height+32,obj_cell,false,true);
         if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour)
 		{
 			Returned.CanTake=true;
 		};
 
          //check for taking bottom left cell for allowing take out the piece
-        Returned=collision_point(x-sprite_width/2,y+sprite_height+32,o_Segment,false,true);
-        if (Returned!=noone and Returned.Piece_ID!=-1 and Retunerd.Colour!=Colour)
+        Returned=collision_point(x-sprite_width/2,y+sprite_height+32,obj_cell,false,true);
+        if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour)
 		{
 			Returned.CanTake=true;
 		};
@@ -88,23 +88,23 @@ if argument0=0
     //White Moves
     if Colour="White"{
         if Moves>0{//Check to see if the pawn has not moved, and if it has not we will allowed it to move two segments in front of it instead of one.
-            Returned=collision_point(x+sprite_width/2,y-sprite_height/2,o_Segment,false,true); //// |
+            Returned=collision_point(x+sprite_width/2,y-sprite_height/2,obj_cell,false,true); //// |
             //Check one segment ahead
             if Returned!=noone and Returned.Piece_ID=-1{Returned.CanMove=true}};
         {
             //Check two segment ahead
-            Returned=collision_point(x+sprite_width/2,y-sprite_height/2,o_Segment,false,true);
+            Returned=collision_point(x+sprite_width/2,y-sprite_height/2,obj_cell,false,true);
             if Returned!=noone and Returned.Piece_ID=-1{Returned.CanMove=true};
             if Returned!=noone and Returned.Piece_ID=-1{
-                Returned=collision_point(x+sprite_width/2,y-(sprite_height/2)*2,o_Segment,false,true);
+                Returned=collision_point(x+sprite_width/2,y-(sprite_height/2)*2,obj_cell,false,true);
                 if Returned!=noone and Returned.Piece_ID=-1 and Moves=0{Returned.CanMove=true}}}
 
         //Take Right
-        Returned=collision_point(x+sprite_width+32,y-sprite_height/2,o_Segment,false,true);
+        Returned=collision_point(x+sprite_width+32,y-sprite_height/2,obj_cell,false,true);
         if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour{Returned.CanTake=true};
 
         //Take Left
-        Returned=collision_point(x-sprite_width/2,y-sprite_height/2,o_Segment,false,true);
+        Returned=collision_point(x-sprite_width/2,y-sprite_height/2,obj_cell,false,true);
         if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Colour!=Colour{Returned.CanTake=true};
     }
 }
@@ -117,11 +117,11 @@ if argument0=1{//Check board and mark none safe areas
     if Colour="Black"{
 
         //Take Right
-        Returned=collision_point(x+sprite_width+32,y+sprite_height+32,o_Segment,false,true);
+        Returned=collision_point(x+sprite_width+32,y+sprite_height+32,obj_cell,false,true);
         if Returned!=noone {Returned.NotSafe=true};
 
         //Take Left
-        Returned=collision_point(x-sprite_width/2,y+sprite_height+32,o_Segment,false,true);
+        Returned=collision_point(x-sprite_width/2,y+sprite_height+32,obj_cell,false,true);
         if Returned!=noone {Returned.NotSafe=true};
     }
 
@@ -129,11 +129,11 @@ if argument0=1{//Check board and mark none safe areas
     if Colour="White"{
 
         //Take Right
-        Returned=collision_point(x+sprite_width+32,y-sprite_height/2,o_Segment,false,true);
+        Returned=collision_point(x+sprite_width+32,y-sprite_height/2,obj_cell,false,true);
         if Returned!=noone {Returned.NotSafe=true};
 
         //Take Left
-        Returned=collision_point(x-sprite_width/2,y-sprite_height/2,o_Segment,false,true);
+        Returned=collision_point(x-sprite_width/2,y-sprite_height/2,obj_cell,false,true);
         if Returned!=noone {Returned.NotSafe=true};
     }
 }
