@@ -3,7 +3,7 @@
 	ID = 0;
 	Color = "White";
 	Piece_ID=-1;
-	pieceSprite=s_segment;
+	pieceSprite=s_segment1;
 	image_speed=0;
 	
 	BoardPos="";

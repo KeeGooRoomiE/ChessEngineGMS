@@ -7,12 +7,10 @@
 //2. try to find place where is the best place to not allow move in cells wich was CanMove = false;
 //3. fix postitions in scr_pawn_move() for the White first move to two cells ahead
 
-CanMove=false;
-CanTake=false;
 
-scr_pawn_move(0);
 
-    if (global.Selected=ID) 
+
+if (global.Selected=ID) 
     {
         image_index=3
 	
@@ -52,3 +50,11 @@ scr_pawn_move(0);
 			//image_index=4*CanMove;
 		}
     };
+	
+if Piece_ID= 0
+	{
+	scr_pawn_move_new(0);
+	}
+	
+	
+	

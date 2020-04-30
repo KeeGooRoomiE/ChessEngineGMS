@@ -1,8 +1,6 @@
 ///Draw 
-
-
-debug_x_check=x-sprite_width/2;
-debug_y_check=y+sprite_height+32;
+debug_x_check= 0
+debug_y_check=0
 
 //Drawing the Color of the cell
 draw_self();

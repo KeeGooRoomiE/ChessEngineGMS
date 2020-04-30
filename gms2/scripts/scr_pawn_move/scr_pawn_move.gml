@@ -2,11 +2,6 @@
 //Pawns are the only piece that requires code for both sides in this script due to the way this piece moves in a certain direction.
 
 
-
-
-
-
-
 //TODO:
 
 //reset positions in functions to an array
@@ -14,9 +9,6 @@
 //pos[0,0]=x;
 //pos[0,1]=y;
 //...
-
-
-
 
 
 //if (Color = "Black")
@@ -44,10 +36,10 @@ if argument0=0
 			{
 				Returned.CanMove=true;
 			}
-			//else
-			//{
-			//	Returned.CanMove=false;
-			//}
+			else
+			{
+				Returned.CanMove=false;
+			}
 		};
         
              
