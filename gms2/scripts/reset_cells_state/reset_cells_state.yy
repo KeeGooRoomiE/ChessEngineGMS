@@ -1,8 +1,8 @@
 {
-    "id": "38fe216f-112d-4f73-84e1-cb72137317d7",
+    "id": "94d03139-9acb-460d-bbd5-0702d0d73c30",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_pawn_move",
+    "name": "reset_cells_state",
     "IsCompatibility": false,
     "IsDnD": false
 }

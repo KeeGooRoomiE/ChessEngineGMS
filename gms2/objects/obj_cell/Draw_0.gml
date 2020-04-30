@@ -1,6 +1,6 @@
 ///Draw 
-debug_x_check= 0
-debug_y_check=0
+debug_x_check = 0
+debug_y_check = 0
 
 //Drawing the Color of the cell
 draw_self();
