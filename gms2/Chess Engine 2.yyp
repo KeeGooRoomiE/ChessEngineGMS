@@ -167,14 +167,6 @@
             }
         },
         {
-            "Key": "61915180-23ab-4359-8fac-cbec657d20cc",
-            "Value": {
-                "id": "f7058a75-c197-4c4e-80da-4c2d468fb145",
-                "resourcePath": "sprites\\pngbarn\\pngbarn.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "64e6f4c5-15cf-484a-9b29-59d76f709ade",
             "Value": {
                 "id": "033b8a1d-787b-4405-a239-03540fca4468",
@@ -351,6 +343,14 @@
             }
         },
         {
+            "Key": "a2b30eb3-1acd-4001-bf33-67a651f58d82",
+            "Value": {
+                "id": "50f7c3f1-446a-4476-b3a3-0b9acce6dc68",
+                "resourcePath": "scripts\\rook_move_check_old\\rook_move_check_old.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "abdfeb33-c2ba-45d2-b403-2ddd0c740d1e",
             "Value": {
                 "id": "6f1a5787-cb3b-4c24-a460-a64bfe2cdc9d",
@@ -442,7 +442,8 @@
         "64e6f4c5-15cf-484a-9b29-59d76f709ade",
         "698b94a1-da0e-4506-9b4f-1b1490dddb26",
         "bcb139da-d258-4d0a-bc68-249186cbde18",
-        "1ef242b6-1a67-4008-869a-570981ceb167"
+        "1ef242b6-1a67-4008-869a-570981ceb167",
+        "a2b30eb3-1acd-4001-bf33-67a651f58d82"
     ],
     "tutorial": ""
 }

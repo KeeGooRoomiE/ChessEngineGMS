@@ -1,13 +1,5 @@
 ///@descr pawn_move_check(state);
 
-
-//[HOMEWORK]
-
-//1. check coordinates for White pieces in a check from a CanTake statement OK
-//2. reset coordinates for White pieces if they are wrong (dont forget about x and y debug positions inside of the obj_cell)
-//3. recreate sprites for a pieces (both for black and white)
-
-
 if argument0=0
 {
 	if (global.Selected=ID) 
@@ -197,7 +189,6 @@ if argument0=0
 	    }
 	}
 }
-
 
 
 if argument0=1{//Check board and mark none safe areas
