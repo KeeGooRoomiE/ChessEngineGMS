@@ -1,13 +1,4 @@
    ///Light up segments
-   
-   
-//[HOMEWORK]
-
-//1. determine wich place is the best for checking varibales CanMove and CanTake
-//2. try to find place where is the best place to not allow move in cells wich was CanMove = false;
-//3. fix postitions in scr_pawn_move() for the White first move to two cells ahead
-
-
 
 
 if (global.Selected=ID) 

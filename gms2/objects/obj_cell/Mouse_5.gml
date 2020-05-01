@@ -3,52 +3,60 @@
 global.Selected=ID;
 
 if (CanMove or CanTake)
-{
-	take = false
-
-	if (global.move=true)
+	if (CanMove = CanTake)
+		{
+			CanMove = false
+		}
 	{
+		take = false
 
-		if (Color = "Grey" && global.Cell_Color != "Grey")
+		if (global.move=true)
 		{
-			Color = global.Cell_Color;
-			Piece_ID = global.Piece_Index;
-			take= true
-			image_index = 0
-		}
-		else if (Color = "White" && global.Cell_Color = "Black")
-		{
-			Color = global.Cell_Color;
-			Piece_ID = global.Piece_Index;
-			take=true
-			image_index = 0
-		}
-		else if (Color = "Black" && global.Cell_Color = "White")
-		{
-			Color = global.Cell_Color;
-			Piece_ID = global.Piece_Index;
-			take=true
-			image_index = 0
-		}
-		
-		if (take = true)
-		{
-			with (global.Prev_Cell)
+
+			if (Color = "Grey" && global.Cell_Color != "Grey")
 			{
-				Color="Grey";
-				Piece_ID=-1;
-				image_index = 0;
+				Color = global.Cell_Color;
+				Piece_ID = global.Piece_Index;
+				take= true
+				image_index = 0
+			}
+			else if (Color = "White" && global.Cell_Color = "Black")
+				{
+				if CanTake = true
+					{
+					Color = global.Cell_Color;
+					Piece_ID = global.Piece_Index;
+					take=true
+					image_index = 0
+					}
+				}
+			else if (Color = "Black" && global.Cell_Color = "White")
+				{
+				if CanTake = true
+					{	
+					Color = global.Cell_Color;
+					Piece_ID = global.Piece_Index;
+					take=true
+					image_index = 0
+					}
+				}
+		
+			if (take = true)
+			{
+				with (global.Prev_Cell)
+				{
+					Color="Grey";
+					Piece_ID=-1;
+					image_index = 0;
+					Moves++;
+				}
+			
 				Moves++;
 			}
-			
-			Moves++;
+	
+			global.move=false
 		}
 	
-		global.move=false
+		reset_cells_state();
 	}
-	
-	reset_cells_state();
-}
 
-	
-	

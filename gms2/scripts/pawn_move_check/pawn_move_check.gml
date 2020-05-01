@@ -3,7 +3,7 @@
 
 //[HOMEWORK]
 
-//1. check coordinates for White pieces in a check from a CanTake statement
+//1. check coordinates for White pieces in a check from a CanTake statement OK
 //2. reset coordinates for White pieces if they are wrong (dont forget about x and y debug positions inside of the obj_cell)
 //3. recreate sprites for a pieces (both for black and white)
 
@@ -164,7 +164,7 @@ if argument0=0
 
 	        //check for taking top right cell for allowing take out the piece
 			#region;
-	        Returned=collision_point(x+sprite_width*0.5,y-sprite_height*1.5,obj_cell,false,true);
+	        Returned=collision_point(x+sprite_width*1.5,y-sprite_height*0.5,obj_cell,false,true);
 	        if (Returned!=noone)
 			{
 				if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
