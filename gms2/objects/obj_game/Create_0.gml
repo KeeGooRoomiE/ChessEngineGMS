@@ -26,13 +26,6 @@ global.Debug_Mode = 0;
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
-/// @DnDHash : 648A478E
-/// @DnDArgument : "value" "-1"
-/// @DnDArgument : "var" "Selected"
-global.Selected = -1;
-
-/// @DnDAction : YoYo Games.Common.Set_Global
-/// @DnDVersion : 1
 /// @DnDHash : 78DEAE3D
 /// @DnDArgument : "value" ""Grey""
 /// @DnDArgument : "var" "Cell_Color"

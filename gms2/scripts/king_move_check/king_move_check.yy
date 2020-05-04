@@ -1,8 +1,8 @@
 {
-    "id": "1968e2f5-b634-4cda-a38f-0e190f7f12df",
+    "id": "fca2a834-8911-4f54-9f7e-33f3a8b8bcba",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "s_create_GML",
+    "name": "king_move_check",
     "IsCompatibility": false,
     "IsDnD": false
 }

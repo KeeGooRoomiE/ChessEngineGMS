@@ -35,16 +35,17 @@ else								//if in debug
 	draw_text(x,y,"CanMove: "+string(CanMove)); //type of pieces
 	draw_text(x,y+16,"CanTake: "+string(CanTake)); //Color 
 	draw_text(x,y+32,string(BoardPos));//name of the position
-	draw_text(x,y+48,string(ID));		//number of cell at the board
-	draw_text(x,y+64,string(Moves));	//count of moves at this cell
+	draw_text(x,y+48,string(Piece_ID));		//number of cell at the board
+	draw_text(x,y+64,"Moves: " +string(Moves));	//count of moves at this cell
+	draw_text(x,y+80,"Cast1:" +string(Castling1));	//castling1
 	
-	if (collision_point(debug_x_check,debug_y_check,obj_cell,false,true) != noone)
-	{
-		draw_line_color(x,y,debug_x_check,debug_y_check,c_green,c_green);
-	}
-	else
-	{
-		draw_line_color(x,y,debug_x_check,debug_y_check,c_red,c_red);
-	}
+//	if (collision_point(debug_x_check,debug_y_check,obj_cell,false,true) != noone)
+//	{
+//		draw_line_color(x,y,debug_x_check,debug_y_check,c_green,c_green);
+//	}
+//	else
+//	{
+//		draw_line_color(x,y,debug_x_check,debug_y_check,c_red,c_red);
+//	}
 	
 }

@@ -1,18 +1,19 @@
+
 ///@descr pawn_move_check(state);
 
 if argument0=0
+
 {
 	if (global.Selected=ID) 
 	{
 
 	    if Color="Black"
 		{
-			#region 
+		#region 
 	        //check 1 step
+			#region;
 			if (Moves>0)
 			{
-				//common move
-				#region;
 	            Returned=collision_point(x+sprite_width/2,y+sprite_height*1.5,obj_cell,false,true);
 	            if (Returned!=noone)
 				{
@@ -62,7 +63,7 @@ if argument0=0
 			};
 				
 
-	        //check for taking bottom right cell for allowing take out the piece
+	        //check take bottom right
 			#region;
 	        Returned=collision_point(x+sprite_width*1.5,y+sprite_height*1.5,obj_cell,false,true);
 	        if (Returned!=noone)
@@ -78,7 +79,7 @@ if argument0=0
 			}
 			#endregion;
 
-	         //check for taking bottom left cell for allowing take out the piece
+	         //check take bottom left
 			 #region;
 	        Returned=collision_point(x-sprite_width*0.5,y+sprite_height*1.5,obj_cell,false,true);
 	        if (Returned!=noone)
@@ -93,6 +94,15 @@ if argument0=0
 				}
 			}
 			#endregion;
+			 
+			 //check arrive end
+			 //#region
+			 //if (ID<=63) and (ID>=56)
+			 //{
+				//Piece_ID = 4
+
+			 //}
+			 //#endregion
 		#endregion;
 	    }
 
@@ -103,8 +113,7 @@ if argument0=0
 	        //check 1 step
 			if (Moves>0)
 			{
-				//common move
-				#region;
+			#region;
 	            Returned=collision_point(x+sprite_width/2,y-sprite_height*0.5,obj_cell,false,true);
 	            if (Returned!=noone)
 				{
@@ -152,9 +161,7 @@ if argument0=0
 				}
 			#endregion;
 			};
-				
-
-	        //check for taking top right cell for allowing take out the piece
+	        //check take top left
 			#region;
 	        Returned=collision_point(x+sprite_width*1.5,y-sprite_height*0.5,obj_cell,false,true);
 	        if (Returned!=noone)
@@ -170,7 +177,7 @@ if argument0=0
 			}
 			#endregion;
 
-	         //check for taking top left cell for allowing take out the piece
+	         //check take top right
 			 #region;
 	        Returned=collision_point(x-sprite_width*0.5,y-sprite_height*0.5,obj_cell,false,true);
 	        if (Returned!=noone)
@@ -185,6 +192,15 @@ if argument0=0
 				}
 			}
 			#endregion;
+			 //check arrive end
+			 //#region
+			 //if (ID<=7) and (ID>=0)
+			 //{
+				//Piece_ID = 4
+
+			 //}
+			 //#endregion
+			 
 		#endregion;
 	    }
 	}
@@ -192,6 +208,7 @@ if argument0=0
 
 
 if argument0=1{//Check board and mark none safe areas
+	#region
 
     //Black Moves
     if Color="Black"{
@@ -217,4 +234,4 @@ if argument0=1{//Check board and mark none safe areas
         if Returned!=noone {Returned.NotSafe=true};
     }
 }
-	
+#endregion

@@ -1,8 +1,8 @@
 {
-    "id": "1968e2f5-b634-4cda-a38f-0e190f7f12df",
+    "id": "6e157dd0-6e02-4672-a1ee-7f31dc56314b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "s_create_GML",
+    "name": "drowing_move",
     "IsCompatibility": false,
     "IsDnD": false
 }

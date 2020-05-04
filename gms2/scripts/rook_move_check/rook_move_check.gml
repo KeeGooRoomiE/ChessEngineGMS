@@ -6,7 +6,7 @@
 //1. fix names inside of the script OK
 //2. try to set #region OK
 //3. refactor tabulation of the script OK
-//4. Add: check for a coordinates of collision_point functions
+//4. Add: check for a coordinates of collision_point functions OK
 //5. Optional. Try to reset a size and camera borders inside the room.
 //6. Optional. Try to set ROC inside of the game(try to set an 15 lines for it to draw)
 //7. Optional. Re-create ROC inside of the source. (Open in Explorer > One folder  upper, and there is the files)
@@ -18,12 +18,6 @@ if argument0=0
 {
 	//Selected To Move
 
-//X
-//M -- G
-//M -- G
-//T -- R
-//1
-
 //Down
 #region
 
@@ -31,7 +25,7 @@ var Returned=0;
 
 Y=y+sprite_height+1;
 
-while (Returned!=noone)
+while (Returned!=noone) 
 {
     Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
     
@@ -146,18 +140,94 @@ while Returned!=noone
 	};
 	X-=sprite_width;
 }
+#endregion
 }
+
+//Castling1
+#region
+
+if ID = 0 and Moves = 0
+	{
+		var Returned=0;
+		X=x+sprite_width+1;
+		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
+		if (Returned.Piece_ID=-1)
+			{
+			Returned.CanMove=true;
+			global.cast1a = Returned.id
+			X+=sprite_width;
+			Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
+			if (Returned.Piece_ID=-1)
+				{
+				Returned.CanMove=true;
+				global.cast1b = Returned.id
+				X+=sprite_width;
+				Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
+				if (Returned.Piece_ID=-1)
+					{
+					Returned.CanMove=true;
+					X+=sprite_width;
+					Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
+					if (Returned.Piece_ID=5) and (Returned.Moves=0)
+						{
+						Returned.Castling1=1
+						}
+					}
+				}
+			}
+	}
+		
+
+
+//check 2 steps
+#region;
+//check for the first one
+Returned=collision_point(x+sprite_width/2,y+sprite_height*1.5,obj_cell,false,true);
+if (Returned!=noone)
+	{
+		if (Returned.Piece_ID=-1)
+		{
+			Returned.CanMove=true;
+			//check for the second one
+			Returned=collision_point(x+sprite_width/2,y+sprite_height*2.5,obj_cell,false,true);
+			if (Returned!=noone)
+			{
+				if (Returned.Piece_ID=-1)
+				{
+					Returned.CanMove=true;
+				}
+				else
+				{
+					Returned.CanMove=false;
+				}
+			}
+		}
+		else
+		{
+			Returned.CanMove=false;
+		}
+	}
+#endregion;
+
+
+
+
+
+
+
+
 
 #endregion
 
 
 if argument0=1
-{//Check board and mark none safe areas
+{
+//Check board and mark none safe areas
 	
 #region
 
-    //Down
-	#region
+//Down
+#region
 	
     var Returned=0;
     Y=y+sprite_height+1;
@@ -177,8 +247,6 @@ if argument0=1
     }
 	
 	#endregion
-
-
 
 //Up
 #region

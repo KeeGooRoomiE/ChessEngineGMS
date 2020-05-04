@@ -5,9 +5,8 @@
 	Piece_ID=-1;
 	pieceSprite=s_segment1;
 	image_speed=0;
+	Castling1 = 0;
 	
-	BoardPos="";
-    
     CanMove=false;
     CanTake=false;
 	

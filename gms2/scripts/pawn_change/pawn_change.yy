@@ -1,8 +1,8 @@
 {
-    "id": "1968e2f5-b634-4cda-a38f-0e190f7f12df",
+    "id": "5a6d2cfe-1285-4381-b235-70d3b168f7a7",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "s_create_GML",
+    "name": "pawn_change",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,5 +1,6 @@
+   
    ///Light up segments
-
+#region
 
 if (global.Selected=ID) 
 {
@@ -35,11 +36,16 @@ else
 		{
 			image_index=4;
 		};
-			
+		if  (Castling1=true)
+		{
+			image_index=6;
+		};	
+		
 		//image_index=4*CanMove;
 	}
 };
-	
+#endregion
 
-	
+	// Pawn_change
+pawn_change()
 	
