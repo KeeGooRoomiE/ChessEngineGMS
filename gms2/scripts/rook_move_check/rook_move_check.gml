@@ -219,6 +219,80 @@ if (Returned!=noone)
 
 #endregion
 
+//Castling2
+#region
+
+if ID = 7 and Moves = 0
+	{
+		var Returned=0;
+		X=x-1;
+		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
+		if (Returned.Piece_ID=-1)
+			{
+			Returned.CanMove=true;
+			global.cast1a = Returned.id
+			X-=sprite_width;
+			
+			Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
+			if (Returned.Piece_ID=-1)
+				{
+				Returned.CanMove=true;
+				global.cast1b = Returned.id
+				X-=sprite_width;
+				Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
+				if (Returned.Piece_ID=5) and (Returned.Moves=0)
+					{
+					Returned.Castling1=1
+					}
+				}
+			}
+		}
+	
+		
+
+
+//check 2 steps
+#region;
+//check for the first one
+Returned=collision_point(x+sprite_width/2,y+sprite_height*1.5,obj_cell,false,true);
+if (Returned!=noone)
+	{
+		if (Returned.Piece_ID=-1)
+		{
+			Returned.CanMove=true;
+			//check for the second one
+			Returned=collision_point(x+sprite_width/2,y+sprite_height*2.5,obj_cell,false,true);
+			if (Returned!=noone)
+			{
+				if (Returned.Piece_ID=-1)
+				{
+					Returned.CanMove=true;
+				}
+				else
+				{
+					Returned.CanMove=false;
+				}
+			}
+		}
+		else
+		{
+			Returned.CanMove=false;
+		}
+	}
+#endregion;
+
+
+
+
+
+
+
+
+
+#endregion
+
+
+
 
 if argument0=1
 {
