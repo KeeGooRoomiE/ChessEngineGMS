@@ -54,11 +54,9 @@ if (CanMove or CanTake)
 					Piece_ID=-1;
 					image_index = 0;
 					global.player = global.player*-1
-					Moves++;
 				}
 			global.Next = BoardPos
 			drowing_move()
-			//castling()
 			Moves++;
 			}
 			global.move=false
@@ -67,9 +65,9 @@ if (CanMove or CanTake)
 	}
 #endregion
 
-//Castling1
+//Castling Black
 #region
-if Castling1
+if Castling_B
 	{
 	if (Piece_ID = 5 && Color = "Black")
 		{
@@ -90,6 +88,37 @@ if Castling1
 			with (global.cast1b)
 				{
 				Color= "Black";
+				Piece_ID = 1;
+				}
+			Castling1=0
+			global.player = global.player*-1
+		}
+	}
+#endregion
+
+//Castling White
+#region
+if Castling_W
+	{
+	if (Piece_ID = 5 && Color = "White")
+		{
+			with (global.Prev_Cell)
+				{
+				Color="Grey";
+				Piece_ID=-1;
+				image_index = 0;
+				Moves++;
+				}	
+			Color = "Grey"
+			Piece_ID = -1
+			with (global.cast1c)
+				{
+				Color= "White";
+				Piece_ID = 5;
+				}
+			with (global.cast1d)
+				{
+				Color= "White";
 				Piece_ID = 1;
 				}
 			Castling1=0

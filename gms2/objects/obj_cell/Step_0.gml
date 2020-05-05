@@ -36,7 +36,7 @@ else
 		{
 			image_index=4;
 		};
-		if  (Castling1=true)
+		if  (Castling_B=true) or (Castling_W=true)
 		{
 			image_index=6;
 		};	

@@ -67,6 +67,9 @@ if global.player = -1
 			global.Prev_Cell=id;
 
 			global.move=true
+			
+			global.cast1c = id
+			global.cast1d = id
 
 	
 			reset_cells_state();
