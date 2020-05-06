@@ -4,4 +4,6 @@ with (obj_cell)
 {
 	CanMove=false;
 	CanTake=false;
+	Castling_B=0
+	Castling_W=0
 }

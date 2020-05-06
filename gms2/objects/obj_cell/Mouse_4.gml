@@ -19,8 +19,8 @@ if global.player = 1
 			
 			global.Prev = BoardPos
 			
-			global.cast1a = id
-			global.cast1b = id
+			global.cast1c = id
+			global.cast1d = id
 
 	
 			reset_cells_state();
@@ -68,8 +68,10 @@ if global.player = -1
 
 			global.move=true
 			
-			global.cast1c = id
-			global.cast1d = id
+			global.Prev = BoardPos
+			
+			global.cast1a = id
+			global.cast1b = id
 
 	
 			reset_cells_state();
