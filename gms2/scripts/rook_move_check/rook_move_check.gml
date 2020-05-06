@@ -140,10 +140,10 @@ while Returned!=noone
 	};
 	X-=sprite_width;
 }
-#endregion
 }
+#endregion
 
-//Castling1
+//Castling Black left
 #region
 
 if ID = 0 and Moves = 0
@@ -177,46 +177,6 @@ if ID = 0 and Moves = 0
 			}
 	}
 		
-
-
-//check 2 steps
-#region;
-//check for the first one
-Returned=collision_point(x+sprite_width/2,y+sprite_height*1.5,obj_cell,false,true);
-if (Returned!=noone)
-	{
-		if (Returned.Piece_ID=-1)
-		{
-			Returned.CanMove=true;
-			//check for the second one
-			Returned=collision_point(x+sprite_width/2,y+sprite_height*2.5,obj_cell,false,true);
-			if (Returned!=noone)
-			{
-				if (Returned.Piece_ID=-1)
-				{
-					Returned.CanMove=true;
-				}
-				else
-				{
-					Returned.CanMove=false;
-				}
-			}
-		}
-		else
-		{
-			Returned.CanMove=false;
-		}
-	}
-#endregion;
-
-
-
-
-
-
-
-
-
 #endregion
 
 //Castling2

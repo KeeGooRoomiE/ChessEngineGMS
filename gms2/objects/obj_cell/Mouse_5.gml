@@ -54,10 +54,11 @@ if (CanMove or CanTake)
 					Piece_ID=-1;
 					image_index = 0;
 					global.player = global.player*-1
+					Moves++;
 				}
 			global.Next = BoardPos
 			drowing_move()
-			Moves++;
+			
 			}
 			global.move=false
 		}
