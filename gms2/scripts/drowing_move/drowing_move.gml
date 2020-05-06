@@ -1,5 +1,7 @@
 // draw the move
 //  draw_text(x,y,"CanMove: "+string(CanMove)); //type of pieces
 
-draw_set_color(c_black)
-draw_text(0,0, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(global.Next));
+draw_text_color(obj_board.x-496,obj_board.y-497-16, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(global.Next),c_black,c_black,c_black,c_black,1);
+//draw_text(0,0, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(global.Next));
+
+show_debug_message("Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(global.Next))
