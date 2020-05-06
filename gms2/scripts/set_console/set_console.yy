@@ -1,5 +1,5 @@
 {
-    "id": "fc9ba7e7-e54a-45d6-a6f9-631afb71771b",
+    "id": "9ff4f093-c93f-435a-829c-c23904817d47",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "set_console",

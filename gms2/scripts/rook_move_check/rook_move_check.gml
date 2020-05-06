@@ -1,19 +1,6 @@
 ///@descr rook_move_check(state);
 
 
-//[HOMEWORK]
-
-//1. fix names inside of the script OK
-//2. try to set #region OK
-//3. refactor tabulation of the script OK
-//4. Add: check for a coordinates of collision_point functions OK
-//5. Optional. Try to reset a size and camera borders inside the room.
-//6. Optional. Try to set ROC inside of the game(try to set an 15 lines for it to draw)
-//7. Optional. Re-create ROC inside of the source. (Open in Explorer > One folder  upper, and there is the files)
-//8. Optional. Try to send a new string to the ROC when you trigger the Debug_Mode(also delete showing console only in debug)
-//9. Try to start the game w/ working rook_move script
-//10.Try to figue out why pawns are able to set CanMove in free cells
-
 if argument0=0
 {
 	//Selected To Move

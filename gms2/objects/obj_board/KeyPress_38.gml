@@ -1,0 +1,1 @@
+x=get_integer("Board X",0);
