@@ -1,4 +1,4 @@
 /// @DnDAction : YoYo Games.Game.Restart_Game
 /// @DnDVersion : 1
-/// @DnDHash : 59515CD3
+/// @DnDHash : 48923646
 game_restart();

@@ -146,7 +146,7 @@ while Returned!=noone
 //Castling Black left
 #region
 
-if ID = 0 and Moves = 0
+if ID = 0 and Moves = 0 and global.Castling_B_done = 0
 	{
 		var Returned=0;
 		X=x+sprite_width+1;
@@ -179,10 +179,10 @@ if ID = 0 and Moves = 0
 		
 #endregion
 
-//Castling2
+//Castling Black right
 #region
 
-if ID = 7 and Moves = 0
+if ID = 7 and Moves = 0 and global.Castling_B_done = 0
 	{
 		var Returned=0;
 		X=x-1;
@@ -251,10 +251,10 @@ if (Returned!=noone)
 
 #endregion
 
-//Castling3
+//Castling White left
 #region
 
-if ID = 56 and Moves = 0
+if ID = 56 and Moves = 0 and global.Castling_W_done = 0
 	{
 		var Returned=0;
 		X=x+sprite_width+1;
@@ -327,10 +327,10 @@ if (Returned!=noone)
 
 #endregion
 
-//Castling4
+//Castling White right
 #region
 
-if ID = 63 and Moves = 0
+if ID = 63 and Moves = 0 and global.Castling_B_done = 0
 	{
 		var Returned=0;
 		X=x-1;

@@ -7,7 +7,8 @@
 	image_speed=0;
 	Castling_B = 0;
 	Castling_W = 0;
-	
+	global.Castling_B_done=0;
+	global.Castling_W_done=0;
 	
     CanMove=false;
     CanTake=false;

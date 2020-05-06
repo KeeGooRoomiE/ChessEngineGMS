@@ -79,21 +79,26 @@ if Castling_B
 				image_index = 0;
 				Moves++;
 				}	
-			Color = "Grey"
-			Piece_ID = -1
+
 			with (global.cast1a)
 				{
 				Color= "Black";
 				Piece_ID = 5;
+				Moves++;
 				}
 			with (global.cast1b)
 				{
 				Color= "Black";
 				Piece_ID = 1;
-				}
-			Castling1=0
+				Moves++;
+				
+			Color = "Grey"
+			Piece_ID = -1
+			Moves++
+			global.Castling_B_done = 1
 			global.player = global.player*-1
 		}
+	}
 	}
 #endregion
 
@@ -110,8 +115,7 @@ if Castling_W
 				image_index = 0;
 				Moves++;
 				}	
-			Color = "Grey"
-			Piece_ID = -1
+
 			with (global.cast1c)
 				{
 				Color= "White";
@@ -122,7 +126,10 @@ if Castling_W
 				Color= "White";
 				Piece_ID = 1;
 				}
-			Castling1=0
+			Color = "Grey"
+			Piece_ID = -1
+			Moves++;
+			global.Castling_W_done = 1
 			global.player = global.player*-1
 		}
 	}
