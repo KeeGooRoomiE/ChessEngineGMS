@@ -2,6 +2,24 @@
 debug_x_check = x+sprite_width*0.5
 debug_y_check = y-sprite_height*1.5
 
+//var check_mouse_pos_x;
+
+//[HOMEWORK]
+
+//1. create a popup window for a selecting a piece when it reaches end of the board
+//1.1 draw a popup window with check for a proper piece and dont allow to end move if it will not be checked
+//2. try to set a responsive scale of the text. (Max font size - percentage, per-line separation the same)
+//3. try to create a new argument inside of the script to draw the console output i different colors
+//4. check function point_in_*  (point_in_rectangle) in Help.
+
+
+//isSelectedPiece = true
+
+
+//if point_in_rectangle(check_mouse_pos_x,y,)
+//{
+//	//reset pawn to proper piece
+//}
 
 //Drawing the Color of the cell
 draw_self();

@@ -1,0 +1,28 @@
+Resource name collision 'galaxy_create' already exists, renamed to 'galaxy_create_scripts'
+Converting GML script: ${project_dir}\scripts\galaxy_create_scripts\galaxy_create_scripts.gml
+Converted description /// @description galaxy_create(x,y,obj,radius,stars,arms,tight,sep,displacement,spread,bunch1,bunch2)/// @param x
+/// @param y
+/// @param obj
+/// @param radius
+/// @param stars
+/// @param arms
+/// @param tight
+/// @param sep
+/// @param displacement
+/// @param spread
+/// @param bunch1
+/// @param bunch2
+
+Converting GML script: ${project_dir}\objects\obj_bkg_star\Create_0.gml
+Converted description /// @description Sets behavior to stars
+
+Converting GML script: ${project_dir}\objects\obj_bkg_star\Step_2.gml
+Converted description /// @description Rotation
+
+Converting GML script: ${project_dir}\objects\obj_stay_star\Create_0.gml
+Converted description /// @description Sets behavior to stars
+
+Added compatibility script 'action/action_restart_game.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script '__init_global.gml'
+Updated compatibility script '__global_object_depths.gml'

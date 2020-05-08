@@ -1,0 +1,1 @@
+galaxy_create_scripts(500,500,choose(obj_stay_star,obj_bkg_star),irandom_range(240,500),2048,2,0.32,1,3,0.62,0.44,0.8)

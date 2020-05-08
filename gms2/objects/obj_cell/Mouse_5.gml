@@ -1,13 +1,5 @@
 ///@descr Move piece if it allowed
-
 global.Selected=ID;
-
-///[HOMEWORK] 
-
-//1. fix global.Prev inside of set_console OK
-//2. go to obj_console and add a new argument - this argument will set color to text we will draw.
-//3. reset arguments if drowing_move from internal to external
-//4. Optional.fix castling.
 
 //Move and Take
 #region
@@ -64,7 +56,7 @@ if (CanMove or CanTake)
 				}
 			global.Next = BoardPos
 			
-			//drowing_move(BoardPos)
+			drowing_move(mouse_x,mouse_y, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(BoardPos),c_black,1)
 			
 			set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
 			
