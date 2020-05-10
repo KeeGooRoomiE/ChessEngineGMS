@@ -1,8 +1,8 @@
 {
-    "id": "00f1bd55-a977-4b37-999d-dfc3ff832871",
+    "id": "56af1e04-f653-42c2-8d44-6314c6616e1e",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "s_piece_data",
+    "name": "choose_piece",
     "IsCompatibility": false,
     "IsDnD": false
 }

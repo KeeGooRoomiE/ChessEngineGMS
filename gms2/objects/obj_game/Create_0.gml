@@ -44,6 +44,12 @@ global.Piece_Index = -1;
 /// @DnDArgument : "var" "Prev_Cell"
 global.Prev_Cell = 0;
 
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 78B040E3
+/// @DnDArgument : "var" "mode"
+global.mode = 0;
+
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 24C5FB80

@@ -1,5 +1,10 @@
    
-   ///Light up segments
+  
+  
+if global.mode = 0
+  {
+
+  ///Light up segments
 #region
 
 if (global.Selected=ID) 
@@ -49,3 +54,9 @@ else
 	// Pawn_change
 pawn_change()
 	
+  }
+else
+  {
+
+  }
+  

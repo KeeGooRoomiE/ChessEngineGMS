@@ -1,6 +1,8 @@
 ///@descr Select this cell
 
 
+if global.mode = 0
+{
 
 if global.player = 1
 #region
@@ -104,3 +106,9 @@ if global.player = -1
 	}
 #endregion
 
+}
+
+else
+	{
+	copy()	
+	}

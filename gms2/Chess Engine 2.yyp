@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "3d151e2e-59af-4470-9ab5-2d53d557b96d",
+            "Value": {
+                "id": "f46231ad-44ac-444c-a58f-1867fadf5a07",
+                "resourcePath": "scripts\\copy\\copy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "409ed7e0-ee9e-41eb-8f7d-c9229b24fb71",
             "Value": {
                 "id": "b77882ea-3fd8-4ee0-a207-4dd0788966fb",
@@ -228,6 +236,14 @@
                 "id": "23ab79a1-2536-4af8-a63c-b7f1544b47ef",
                 "resourcePath": "views\\54052913-e8c6-4e1d-8970-40f120d097aa.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "56af1e04-f653-42c2-8d44-6314c6616e1e",
+            "Value": {
+                "id": "a30e5e09-c233-48ab-83e5-c45248696acb",
+                "resourcePath": "scripts\\choose_piece\\choose_piece.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -447,6 +463,14 @@
             }
         },
         {
+            "Key": "9ee49d98-e5bd-4c21-a58a-0ac81eefc375",
+            "Value": {
+                "id": "7f170de1-c284-44ec-bfb0-c6055e4a8878",
+                "resourcePath": "objects\\obj_choose\\obj_choose.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9ff4f093-c93f-435a-829c-c23904817d47",
             "Value": {
                 "id": "5c75b42d-7965-441d-b9e8-3912dcb57962",
@@ -500,6 +524,14 @@
                 "id": "238615ff-b9c3-49da-b846-b643faa7aafa",
                 "resourcePath": "views\\ba495519-e95d-40c9-aa6f-84871e79a46f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bb427780-30d6-4b4c-944d-6406b282bf02",
+            "Value": {
+                "id": "d128c996-3a22-4a71-9ebf-14a023b1c64b",
+                "resourcePath": "sprites\\s_choose\\s_choose.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -639,7 +671,9 @@
         "5a6d2cfe-1285-4381-b235-70d3b168f7a7",
         "6e157dd0-6e02-4672-a1ee-7f31dc56314b",
         "9ff4f093-c93f-435a-829c-c23904817d47",
-        "c97103b2-d727-40a7-a58c-ac0b81d94962"
+        "c97103b2-d727-40a7-a58c-ac0b81d94962",
+        "56af1e04-f653-42c2-8d44-6314c6616e1e",
+        "3d151e2e-59af-4470-9ab5-2d53d557b96d"
     ],
     "tutorial": ""
 }

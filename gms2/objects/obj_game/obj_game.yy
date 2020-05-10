@@ -137,6 +137,20 @@
             "value": "0",
             "varName": "global.Next",
             "varType": 0
+        },
+        {
+            "id": "85c14bd0-8d4b-486f-9418-cc79114d05d6",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "global.Mode",
+            "varType": 0
         }
     ],
     "solid": false,

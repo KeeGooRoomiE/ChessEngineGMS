@@ -18,7 +18,4 @@
     NotSafe=false;
     NotSafeAggressor=noone;
 	Protected=false;
-	
-    Castling=false;
-    CastlingID=-1;
     
