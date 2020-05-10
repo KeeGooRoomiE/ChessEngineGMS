@@ -148,15 +148,23 @@ if global.mode = 0
 
 	}
 else
+// Mode1
+#region
 	{
 	if global.mode = 1
 		{
-			global.Selected = ID
+			global.Cell_Color=Color;
+			global.Piece_Index=Piece_ID;
 			with (global.Prev_Cell)
 				{
-				Color = Color
-				Piece_ID = Piece_ID
+				Color = global.Cell_Color
+				Piece_ID = global.Piece_Index
 				}
-			global.mode = 0
+		instance_destroy(global.temp1)
+		instance_destroy(global.temp2)
+		instance_destroy(global.temp3)
+		instance_destroy(global.temp4)
+		global.mode = 0
 		}
+#endregion
 	}

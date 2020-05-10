@@ -1,6 +1,4 @@
-   
-  
-  
+ 
 if global.mode = 0
   {
 
@@ -56,7 +54,5 @@ pawn_change()
 	
   }
 else
-  {
-
-  }
+  {}
   

@@ -107,8 +107,25 @@ if global.player = -1
 #endregion
 
 }
+// mode1
 
 else
 	{
-	copy()	
+#region
+	if global.mode = 1
+		{
+			global.Cell_Color=Color;
+			global.Piece_Index=Piece_ID;
+			with (global.Prev_Cell)
+				{
+				Color = global.Cell_Color
+				Piece_ID = global.Piece_Index
+				}
+		instance_destroy(global.temp1)
+		instance_destroy(global.temp2)
+		instance_destroy(global.temp3)
+		instance_destroy(global.temp4)
+		global.mode = 0
+		}
+#endregion
 	}
