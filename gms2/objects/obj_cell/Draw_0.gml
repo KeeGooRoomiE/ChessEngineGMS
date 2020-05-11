@@ -6,6 +6,10 @@ debug_y_check = y-sprite_height*1.5
 
 //[HOMEWORK]
 
+//1.read about point_in_*
+//2. try to create a new sprite between a piece and the cell whrn it goes to border of the board
+
+
 //1. create a popup window for a selecting a piece when it reaches end of the board
 //1.1 draw a popup window with check for a proper piece and dont allow to end move if it will not be checked
 //2. try to set a responsive scale of the text. (Max font size - percentage, per-line separation the same)

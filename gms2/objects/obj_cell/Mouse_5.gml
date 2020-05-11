@@ -61,7 +61,11 @@ if global.mode = 0
 			
 					drowing_move(mouse_x,mouse_y, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(BoardPos),c_black,1)
 			
+<<<<<<< HEAD
 					set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
+=======
+			set_console(0,string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
+>>>>>>> Adding new sprites
 			
 					reset_cells_state();
 			
