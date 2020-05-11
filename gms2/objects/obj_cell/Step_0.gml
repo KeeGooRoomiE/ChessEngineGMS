@@ -2,7 +2,7 @@
 if global.mode = 0
   {
 
-  ///Light up segments
+	//Light up segments
 #region
 
 if (global.Selected=ID) 
@@ -39,7 +39,7 @@ else
 		{
 			image_index=4;
 		};
-		if  (Castling_B=true) or (Castling_W=true)
+		if  (Castling_B=true) or (Castling_W=true) or (Passant = 1)
 		{
 			image_index=6;
 		};	
@@ -51,6 +51,8 @@ else
 
 	// Pawn_change
 pawn_change()
+
+//en_passant()
 	
   }
 else

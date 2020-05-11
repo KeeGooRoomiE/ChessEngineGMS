@@ -55,8 +55,8 @@ else								//if in debug
 	draw_text(x,y+32,string(BoardPos));//name of the position
 	draw_text(x,y+48,string(Piece_ID));		//number of cell at the board
 	draw_text(x,y+64,"Moves: " +string(Moves));	//count of moves at this cell
-	draw_text(x,y+80,"CastB:" +string(Castling_B));	//castling1
-	draw_text(x,y+96,"CastW:" +string(Castling_W));	//castling1
+	draw_text(x,y+80,"Passant:" +string(Passant));	//Passant
+
 	
 //	if (collision_point(debug_x_check,debug_y_check,obj_cell,false,true) != noone)
 //	{

@@ -96,7 +96,7 @@ var Returned=0;
 X=x+sprite_width+1;
 while Returned!=noone
 {
-	Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
+	Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
 	if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
 	{
 		if Returned.Piece_ID!=5

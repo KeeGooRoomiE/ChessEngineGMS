@@ -1,3 +1,5 @@
+// Pawn change
+
 if argument0 = 0
 {
 	global.temp1=0; global.temp2=0; global.temp3=0; global.temp4=0;

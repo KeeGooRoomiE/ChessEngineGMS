@@ -1,4 +1,4 @@
-///@descr Select this cell
+///Player move and behavior
 
 
 if global.mode = 0
@@ -107,7 +107,7 @@ if global.player = -1
 #endregion
 
 }
-// mode1
+// Pawn change
 
 else
 	{

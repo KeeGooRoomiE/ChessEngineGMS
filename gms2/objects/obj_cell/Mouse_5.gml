@@ -9,13 +9,8 @@ if global.mode = 0
 		#region
 
 		if (CanMove or CanTake)
-
 			{
 				take = false
-
-				//if (global.move=true)
-				//{
-
 					if (Color = "Grey" && global.Cell_Color != "Grey")
 					{
 						if CanMove = true
@@ -24,8 +19,9 @@ if global.mode = 0
 								Piece_ID = global.Piece_Index;
 								take=true
 								image_index = 0
+								Moves++;
 							}
-				
+					en_passant()
 					}
 					else if (Color = "White" && global.Cell_Color = "Black")
 						{
@@ -70,11 +66,9 @@ if global.mode = 0
 					reset_cells_state();
 			
 					}
-					//global.move=false
-				//}
-				//reset_cells_state();
+
 			}
-		Moves++;
+
 		#endregion
 
 		//Castling Black
@@ -145,10 +139,23 @@ if global.mode = 0
 				}
 			}
 		#endregion
+		
+		//En Passant
+		#region
+		//if (Passant = 1)
+		//	{
+		//	self.Color = "White"
+		//	self.Piece_ID = 0
+		//	instance_destroy(global.Prev_Pass)
+		//	instance_destroy(global.Passant_W_left)
+		//	instance_destroy(global.Passant_W_right)
+		//	}
+			
+		#endregion
 
 	}
 else
-// Mode1
+		// Pawn Change
 #region
 	{
 	if global.mode = 1
