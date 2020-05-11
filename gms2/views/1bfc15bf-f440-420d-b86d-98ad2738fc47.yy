@@ -12,7 +12,12 @@
         "196d6dbf-cd7b-400f-af84-56f6dae2bf94",
         "f860ff7b-0fe8-4403-97d7-ea462e6a34c1",
         "a0ccb808-a3a6-4753-b9e4-5071ae239a3a",
+<<<<<<< HEAD
         "9ee49d98-e5bd-4c21-a58a-0ac81eefc375"
+=======
+        "f0f12584-5645-4115-9d15-e26a38b36c6f",
+        "7474d64b-8c4d-4124-8c27-4a86ce9d3fcf"
+>>>>>>> New images
     ],
     "filterType": "GMObject",
     "folderName": "objects",
