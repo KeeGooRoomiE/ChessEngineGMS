@@ -1,14 +1,17 @@
-/// @DnDAction : YoYo Games.Common.Execute_Script
-/// @DnDVersion : 1.1
-/// @DnDHash : 1ADDEEF0
-/// @DnDArgument : "script" "s_controller_step_GML"
-/// @DnDSaveInfo : "script" "89253568-f200-4e27-8ea7-32e0a8b565c5"
 script_execute(s_controller_step_GML);
 
-/// @DnDAction : YoYo Games.Common.Execute_Code
-/// @DnDVersion : 1
-/// @DnDHash : 29CD7638
-/// @DnDArgument : "code" "mouse_string=global.Selected;$(13_10)$(13_10)//keyboard_check_released(vk_space) = !global.Debug_Mode;$(13_10)"
 mouse_string=global.Selected;
 
 //keyboard_check_released(vk_space) = !global.Debug_Mode;
+
+
+//[HOMEWORK]
+
+//1. Read about ini_open, ini_write_string\real, ini_read_real\string, ini_close
+//2. Create an empty array inside of the obj_game
+//2.1 Init an array for solve future problems
+//3. Save moves between the lines inside of that array
+//Example for a store moves will be like:  WhitePawnA1H3
+//4. Fix en_passant() script
+// Aprox. Solving: try to check right and left positions only if it has an instance with a piece at that position
+//5. Set a sprite spr_move_info to the room and change this sprite according to the player

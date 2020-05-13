@@ -68,7 +68,7 @@ if global.mode = 0
 //			set_console(0,string(Color)+ " player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
 ////>>>>>>> Adding new sprites
 ////=======
-//			set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
+			set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
 ////>>>>>>> Revert "Adding new sprites"
 			
 					reset_cells_state();
