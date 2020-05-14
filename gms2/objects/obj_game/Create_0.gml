@@ -3,38 +3,29 @@ script_execute(s_piece_data);
 script_execute(s_create_GML);
 
 global.Selected = 0;
-
 global.Debug_Mode = 0;
-
 global.Cell_Color = "Grey";
-
 global.Piece_Index = -1;
-
 global.Prev_Cell = 0;
-
 global.mode = 0;
 
 mouse_string="";
-
-//trigger(set to true\false) variable global.Debug_Mode when we press Space button
-
 
 camera_size=512;
 
 view_wport[0]=camera_size;
 view_hport[0]=camera_size;
 
-//to determine what OS is running right now
+//TODO:
+//Parse data from an array to reproduce the behavior
 
-//1. use internal GMS constants and functions
+//TOMAKE:
+//Timeline
+//Moves store
+//Changes in cells
 
-//2. determine input on OS
-// so if its a mouse = mouse_x and y will change without pressing LMB
-// if its a screen = changed mouse_x and y only with pressing LMB
-
-//3. determine aspect ratio 
-// so if w>h = its a PC
-// if w<h = its a mobile
+moves_array[0]="GAME START:";
+moves_count=0;
 
 
 

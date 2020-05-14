@@ -6,14 +6,14 @@
 	pieceSprite=s_segment1;
 	image_speed=0;
 	
-	store_moves[0]=0;
-	moves_counter=0;
+	//store_moves[0]=0;
+	//moves_counter=0;
 
-	for (i=0; i<20; i++) //inits more than current and showing array wo errors
-	{
-	    store_moves[i]="";
-	    moves_counter=i;
-	}
+	//for (i=0; i<20; i++) //inits more than current and showing array wo errors
+	//{
+	//    store_moves[i]="";
+	//    moves_counter=i;
+	//}
 	
 
 	Castling_B = 0;

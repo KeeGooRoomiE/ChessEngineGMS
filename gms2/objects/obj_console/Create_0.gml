@@ -16,4 +16,6 @@
 	    show_debug_message(console_text[i]); //adds debug message to show info in both places
 	}
 
+	font_size=36//(room_height/458)*8;
+
 set_console("Init game: OK");

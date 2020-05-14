@@ -66,8 +66,8 @@ if global.mode = 0
 			
 					//set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
 
-					store_moves[i]=set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Notaz)+string(BoardPos))
-					moves_counter=moves_counter+1
+					obj_game.moves_count++;
+					obj_game.moves_array[obj_game.moves_count]=set_console(string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Notaz)+string(BoardPos))
 
 					reset_cells_state();
 			
