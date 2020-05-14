@@ -190,34 +190,70 @@ if argument0=0
 	}
 }
 
+// Not Safe Zone
+
+
+if argument0 = 1
+
+	        //check take bottom right
+			#region;
+	        Returned=collision_point(x+sprite_width*1.5,y+sprite_height*1.5,obj_cell,false,true);
+	        if (Returned!=noone)
+			{
+				if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
+				{
+					Returned.NotSafe=true;
+				}
+			}
+			#endregion;
+
+	        //check take bottom left
+			#region;
+	        Returned=collision_point(x-sprite_width*0.5,y+sprite_height*1.5,obj_cell,false,true);
+	        if (Returned!=noone)
+			{
+				if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
+				{
+					Returned.NotSafe=true;
+				}
+			}
+			#endregion;
 
 
 
-if argument0=1{//Check board and mark none safe areas
-	#region
 
-    //Black Moves
-    if Color="Black"{
 
-        //Take Right
-        Returned=collision_point(x+sprite_width+32,y+sprite_height+32,obj_cell,false,true);
-        if Returned!=noone {Returned.NotSafe=true};
 
-        //Take Left
-        Returned=collision_point(x-sprite_width/2,y+sprite_height+32,obj_cell,false,true);
-        if Returned!=noone {Returned.NotSafe=true};
-    }
 
-    //White Moves
-    if Color="White"{
 
-        //Take Right
-        Returned=collision_point(x+sprite_width+32,y-sprite_height/2,obj_cell,false,true);
-        if Returned!=noone {Returned.NotSafe=true};
 
-        //Take Left
-        Returned=collision_point(x-sprite_width/2,y-sprite_height/2,obj_cell,false,true);
-        if Returned!=noone {Returned.NotSafe=true};
-    }
-}
-#endregion
+
+
+//if argument0=1{//Check board and mark none safe areas
+//	#region
+
+//    //Black Moves
+//    if Color="Black"{
+
+//        //Take Right
+//        Returned=collision_point(x+sprite_width+32,y+sprite_height+32,obj_cell,false,true);
+//        if Returned!=noone {Returned.NotSafe=true};
+
+//        //Take Left
+//        Returned=collision_point(x-sprite_width/2,y+sprite_height+32,obj_cell,false,true);
+//        if Returned!=noone {Returned.NotSafe=true};
+//    }
+
+//    //White Moves
+//    if Color="White"{
+
+//        //Take Right
+//        Returned=collision_point(x+sprite_width+32,y-sprite_height/2,obj_cell,false,true);
+//        if Returned!=noone {Returned.NotSafe=true};
+
+//        //Take Left
+//        Returned=collision_point(x-sprite_width/2,y-sprite_height/2,obj_cell,false,true);
+//        if Returned!=noone {Returned.NotSafe=true};
+//    }
+//}
+//#endregion

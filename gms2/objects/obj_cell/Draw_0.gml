@@ -39,7 +39,6 @@ if (!global.Debug_Mode)				//if not in debug
 		pieceSprite=spr_black_pieces;
 	};
 
-	//Not drawing any pieces in a cell if its an empty(grey)
 	if (Color != "Grey")
 	{
 		draw_sprite(pieceSprite,Piece_ID,x,y);
@@ -57,14 +56,5 @@ else								//if in debug
 	draw_text(x,y+64,"Moves: " +string(Moves));	//count of moves at this cell
 	draw_text(x,y+80,"Passant:" +string(Passant));	//Passant
 
-	
-//	if (collision_point(debug_x_check,debug_y_check,obj_cell,false,true) != noone)
-//	{
-//		draw_line_color(x,y,debug_x_check,debug_y_check,c_green,c_green);
-//	}
-//	else
-//	{
-//		draw_line_color(x,y,debug_x_check,debug_y_check,c_red,c_red);
-//	}
 	
 }

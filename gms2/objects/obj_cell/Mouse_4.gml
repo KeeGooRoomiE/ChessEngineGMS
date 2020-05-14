@@ -108,7 +108,6 @@ if global.player = -1
 
 }
 // Pawn change
-
 else
 	{
 #region

@@ -20,6 +20,7 @@ if global.mode = 0
 								take=true
 								image_index = 0
 								Moves++;
+								Notaz="-"
 							}
 					en_passant()
 					}
@@ -32,6 +33,7 @@ if global.mode = 0
 							take=true
 							image_index = 0
 							Moves++;
+							Notaz=":"
 							}
 						}
 					else if (Color = "Black" && global.Cell_Color = "White")
@@ -43,6 +45,7 @@ if global.mode = 0
 							take=true
 							image_index = 0
 							Moves++;
+							Notaz=":"
 					
 							}
 						}
@@ -59,18 +62,13 @@ if global.mode = 0
 						}
 					global.Next = BoardPos
 			
-					drowing_move(mouse_x,mouse_y, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(BoardPos),c_black,1)
+					//drowing_move(mouse_x,mouse_y, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(BoardPos),c_black,1)
 			
-////<<<<<<< HEAD
-////<<<<<<< HEAD
-//					set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
-////=======
-//			set_console(0,string(Color)+ " player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
-////>>>>>>> Adding new sprites
-////=======
-			set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
-////>>>>>>> Revert "Adding new sprites"
-			
+					//set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
+
+					store_moves[i]=set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Notaz)+string(BoardPos))
+					moves_counter=moves_counter+1
+
 					reset_cells_state();
 			
 					}
@@ -89,6 +87,8 @@ if global.mode = 0
 					Color = "Grey"
 					Piece_ID = -1
 					Moves++
+					store_moves[i]="0-0-0"
+					moves_counter=moves_counter+1
 					with (global.Prev_Cell)
 						{
 						Color="Grey";
@@ -110,6 +110,8 @@ if global.mode = 0
 						}
 					global.Castling_B_done = 1
 					global.player = global.player*-1
+					
+
 				}
 			}
 		#endregion
@@ -124,6 +126,8 @@ if global.mode = 0
 					Color = "Grey"
 					Piece_ID = -1
 					Moves++;
+					store_moves[i]="0-0-0"
+					moves_counter=moves_counter+1
 					with (global.Prev_Cell)
 						{
 						Color="Grey";
@@ -144,6 +148,7 @@ if global.mode = 0
 						}
 					global.Castling_W_done = 1
 					global.player = global.player*-1
+					
 				}
 			}
 		#endregion
@@ -180,6 +185,10 @@ else
 		instance_destroy(global.temp3)
 		instance_destroy(global.temp4)
 		global.mode = 0
+		
+		store_moves[i]=set_console(+string(BoardPos)+string(global.Piece_Data[Piece_ID,1]))
+		moves_counter=moves_counter+1
+		
 		}
 #endregion
 	}

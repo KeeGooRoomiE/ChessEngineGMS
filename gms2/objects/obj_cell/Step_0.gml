@@ -43,11 +43,19 @@ else
 		{
 			image_index=6;
 		};	
+		if  (NotSafe=true) 
+		{
+			image_index=7;
+		};	
 		
 		//image_index=4*CanMove;
 	}
 };
 #endregion
+
+pawn_move_check(1);
+
+
 
 	// Pawn_change
 pawn_change()

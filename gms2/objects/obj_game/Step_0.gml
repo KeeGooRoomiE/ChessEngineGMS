@@ -7,10 +7,10 @@ mouse_string=global.Selected;
 
 //[HOMEWORK]
 
-//1. Read about ini_open, ini_write_string\real, ini_read_real\string, ini_close
-//2. Create an empty array inside of the obj_game
+//1. Read about ini_open, ini_write_string\real, ini_read_real\string, ini_close OK
+//2. Create an empty array inside of the obj_game OK
 //2.1 Init an array for solve future problems
-//3. Save moves between the lines inside of that array
+//3. Save moves between the lines inside of that array OK
 //Example for a store moves will be like:  WhitePawnA1H3
 //4. Fix en_passant() script
 // Aprox. Solving: try to check right and left positions only if it has an instance with a piece at that position
