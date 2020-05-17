@@ -58,3 +58,8 @@ else								//if in debug
 
 	
 }
+
+if (isSelectingPiece)
+{
+	
+}

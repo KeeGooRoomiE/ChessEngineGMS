@@ -698,7 +698,7 @@
             "Key": "f494b39f-7e9f-484f-8e9a-86ac724208b0",
             "Value": {
                 "id": "24fec438-9715-42a3-afbb-dba9a256e0e6",
-                "resourcePath": "sprites\\sprite81\\sprite81.yy",
+                "resourcePath": "sprites\\spr_selecting_cell\\spr_selecting_cell.yy",
                 "resourceType": "GMSprite"
             }
         },

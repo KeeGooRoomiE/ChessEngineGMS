@@ -2,7 +2,7 @@
     "id": "f494b39f-7e9f-484f-8e9a-86ac724208b0",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "sprite81",
+    "name": "spr_selecting_cell",
     "For3D": false,
     "HTile": false,
     "VTile": false,

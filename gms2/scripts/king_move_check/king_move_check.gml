@@ -445,3 +445,21 @@ if argument0=1
 		}
 	#endregion
 	}
+
+if argument0=2
+//Check if the king is not safe
+{
+	#region
+	if (Piece_ID = 5)
+	{
+		if (NotSafe)
+		{
+			global.scacco=true;
+		}
+		else
+		{
+			global.scacco=false;
+		}
+	}
+	#endregion
+}

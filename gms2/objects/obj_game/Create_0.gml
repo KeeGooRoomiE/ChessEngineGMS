@@ -7,7 +7,10 @@ global.Cell_Color = "Grey";
 global.Piece_Index = -1;
 global.Prev_Cell = 0;
 global.mode = 0;
-global.scallo = 1;
+global.scacco = false;
+global.moveCell=noone;
+
+localScaccoCheck=false;
 
 
 mouse_string="";

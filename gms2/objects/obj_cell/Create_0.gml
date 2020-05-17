@@ -38,3 +38,4 @@
     NotSafeAggressor=noone;
 	Protected=false;
     
+	isSelectingPiece=false;
