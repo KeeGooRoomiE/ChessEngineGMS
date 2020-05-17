@@ -18,7 +18,7 @@ if global.player = 1
 			global.Prev_Cell=id;
 
 			global.move=true
-			global.moveCell=id;
+			//global.moveCell=id;
 			
 			global.Prev = BoardPos
 			
@@ -70,7 +70,7 @@ if global.player = -1
 			global.Prev_Cell=id;
 
 			global.move=true;
-			global.moveCell=id;
+			//global.moveCell=id;
 			
 			global.Prev = BoardPos
 			

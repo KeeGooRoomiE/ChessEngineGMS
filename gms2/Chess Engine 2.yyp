@@ -642,7 +642,7 @@
             "Key": "dcb2c0cc-59f4-4616-82ab-9bb1ed7c022e",
             "Value": {
                 "id": "f42e8a11-37eb-4fc6-b99b-c3942a6e940c",
-                "resourcePath": "sprites\\sprite82\\sprite82.yy",
+                "resourcePath": "sprites\\spr_selecting_line\\spr_selecting_line.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -66,7 +66,7 @@ if global.mode = 0
 	
 	pawn_change() // Pawn_change
 }
-else
+else		//if global.mode=1;
 {
 	//nothing here by this moment
 	

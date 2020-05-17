@@ -175,6 +175,7 @@ else
 		{
 			global.Cell_Color=Color;
 			global.Piece_Index=Piece_ID;
+			global.moveCell=id;
 			with (global.Prev_Cell)
 				{
 				Color = global.Cell_Color
