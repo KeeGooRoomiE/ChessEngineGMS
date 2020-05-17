@@ -34,7 +34,7 @@
 	
     Moves=0;
 	
-    NotSafe=false;
+    NotSafe=0;
     NotSafeAggressor=noone;
 	Protected=false;
     

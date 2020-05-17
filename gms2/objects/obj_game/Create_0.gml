@@ -1,5 +1,4 @@
 script_execute(s_piece_data);
-
 script_execute(s_create_GML);
 
 global.Selected = 0;
@@ -8,6 +7,8 @@ global.Cell_Color = "Grey";
 global.Piece_Index = -1;
 global.Prev_Cell = 0;
 global.mode = 0;
+global.scallo = 1;
+
 
 mouse_string="";
 

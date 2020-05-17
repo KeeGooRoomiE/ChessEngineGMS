@@ -8,7 +8,7 @@ if argument0=0
 //Down
 #region
 
-var Returned=0;
+Returned=0;
 
 Y=y+sprite_height+1;
 
@@ -20,7 +20,7 @@ while (Returned!=noone)
     {
         if Returned.Piece_ID!=5
         {   
-            Returned.NotSafe=true
+            //RReturned.NotSafe=true
         } 
         break
     };
@@ -41,7 +41,7 @@ while (Returned!=noone)
 //Up
 #region
 
-var Returned=0;
+Returned=0;
 Y=y-1;
 while Returned!=noone
 	{
@@ -50,7 +50,7 @@ while Returned!=noone
 	{
 		if Returned.Piece_ID!=5
 			{
-			Returned.NotSafe=true
+			//RReturned.NotSafe=true
 			} 
 			break
 		
@@ -72,7 +72,7 @@ while Returned!=noone
 //Right
 #region
 
-var Returned=0;
+Returned=0;
 X=x+sprite_width+1;
 while Returned!=noone
 {
@@ -81,7 +81,7 @@ while Returned!=noone
 	{
 		if Returned.Piece_ID!=5
 		{
-		Returned.NotSafe=true
+		//RReturned.NotSafe=true
 		} 
 		break
 	};
@@ -102,7 +102,7 @@ while Returned!=noone
 //Left
 #region
 
-var Returned=0;
+Returned=0;
 X=x-1;
 while Returned!=noone
 {
@@ -111,7 +111,7 @@ while Returned!=noone
 	{
 		if Returned.Piece_ID!=5
 		{
-			Returned.NotSafe=true
+			//RReturned.NotSafe=true
 		}
 		break
 	};
@@ -134,7 +134,7 @@ while Returned!=noone
 
 if ID = 0 and Moves = 0 and global.Castling_B_done = 0
 	{
-		var Returned=0;
+		Returned=0;
 		X=x+sprite_width+1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
 		if (Returned.Piece_ID=-1)
@@ -170,7 +170,7 @@ if ID = 0 and Moves = 0 and global.Castling_B_done = 0
 
 if ID = 7 and Moves = 0 and global.Castling_B_done = 0
 	{
-		var Returned=0;
+		Returned=0;
 		X=x-1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
 		if (Returned.Piece_ID=-1)
@@ -201,7 +201,7 @@ if ID = 7 and Moves = 0 and global.Castling_B_done = 0
 
 if ID = 56 and Moves = 0 and global.Castling_W_done = 0
 	{
-		var Returned=0;
+		Returned=0;
 		X=x+sprite_width+1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
 		if (Returned.Piece_ID=-1)
@@ -238,7 +238,7 @@ if ID = 56 and Moves = 0 and global.Castling_W_done = 0
 
 if ID = 63 and Moves = 0 and global.Castling_B_done = 0
 	{
-		var Returned=0;
+		Returned=0;
 		X=x-1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
 		if (Returned.Piece_ID=-1)
@@ -267,79 +267,135 @@ if ID = 63 and Moves = 0 and global.Castling_B_done = 0
 
 
 if argument0=1
-{
 //Check board and mark none safe areas
-	
+{
 #region
+	if Piece_ID = 1
+	{
+	
+		//Down
+		#region
 
-//Down
-#region
-	
-    var Returned=0;
-    Y=y+sprite_height+1;
+		Returned=0;
+
+		Y=y+sprite_height+1;
+
+		while (Returned!=noone) 
+		{
+		    Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
     
-    while (Returned!=noone)
-    {
-        Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
-        
-        if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color)
-        {
-            Returned.NotSafe=true
-            break
-        };
-        if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color{Returned.NotSafe=true break};
-        if Returned!=noone{Returned.NotSafe=true};
-        Y+=sprite_height;
-    }
-	
-	#endregion
+		    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color)
+		    {
+		        if Returned.Piece_ID!=5
+		        {   
+		            //Returned.NotSafe=true
+		        } 
+		        break
+		    };
+		    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
+		    {
+		        Returned.NotSafe=true
+		        break
+		    };
+		    if (Returned!=noone)
+		    {
+		       //Returned.CanMove=true
+		    };
+    
+		    Y+=sprite_height;
+		};
+		#endregion;
 
-//Up
-#region
+		//Up
+		#region
 
-var Returned=0;
-Y=y-1;
-while Returned!=noone
-{
-Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
-if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color{Returned.NotSafe=true break};
-if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color{Returned.NotSafe=true break};
-if Returned!=noone{Returned.NotSafe=true};
-Y-=sprite_height;
+		Returned=0;
+		Y=y-1;
+		while Returned!=noone
+			{
+			Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
+			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
+			{
+				if Returned.Piece_ID!=5
+					{
+					//RReturned.NotSafe=true
+					} 
+					break
+		
+			};
+			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
+			{
+				Returned.NotSafe=true 
+				break
+			};
+			if Returned!=noone
+			{
+				//Returned.CanMove=true
+			};
+			Y-=sprite_height;
+			}
+
+		#endregion
+
+		//Right
+		#region
+
+		Returned=0;
+		X=x+sprite_width+1;
+		while Returned!=noone
+		{
+			Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
+			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
+			{
+				if Returned.Piece_ID!=5
+				{
+				//RReturned.NotSafe=true
+				} 
+				break
+			};
+			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
+			{
+				Returned.NotSafe=true 
+				break
+			};
+			if Returned!=noone
+			{
+				//Returned.CanMove=true
+			};
+			X+=sprite_width;
+		}
+
+		#endregion
+
+		//Left
+		#region
+
+		Returned=0;
+		X=x-1;
+		while Returned!=noone
+		{
+			Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
+			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
+			{
+				if Returned.Piece_ID!=5
+				{
+					//Returned.NotSafe=true
+				}
+				break
+			};
+			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
+			{
+				Returned.NotSafe=true 
+				break
+			};
+			if Returned!=noone
+			{
+				//Returned.CanMove=true
+			};
+			X-=sprite_width;
+		}
+		#endregion
+
+	}
+#endregion
 }
-
-#endregion
-
-//Right
-#region
-
-var Returned=0;
-X=x+sprite_width+1;
-while Returned!=noone
-{
-Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
-if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color{Returned.NotSafe=true break};
-if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color{Returned.NotSafe=true break};
-if Returned!=noone{Returned.NotSafe=true};
-X+=sprite_width;
-}
-
-#endregion
-
-//Left
-#region
-
-var Returned=0;
-X=x-1;
-while Returned!=noone
-{
-Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
-if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color{Returned.NotSafe=true break};
-if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color{Returned.NotSafe=true break};
-if Returned!=noone{Returned.NotSafe=true};
-X-=sprite_width;
-};};
-#endregion
-
-
-#endregion

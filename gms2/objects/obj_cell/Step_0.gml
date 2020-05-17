@@ -53,14 +53,19 @@ else
 };
 #endregion
 
-pawn_move_check(1);
+pawn_move_check(1)
+rook_move_check(1)
+knight_move_check(1)
+bishop_move_check(1)
+queen_move_check(1)
+king_move_check(1)
 
 
 
 	// Pawn_change
 pawn_change()
 
-//en_passant()
+	//en_passant()
 	
   }
 else

@@ -7,4 +7,5 @@ with (obj_cell)
 	Castling_B=0
 	Castling_W=0
 	Passant = 0
+	NotSafe = 0
 }
