@@ -40,31 +40,31 @@ else								//if in debug
 	draw_text(x,y+80,"Passant:" +string(Passant));	//Passant
 }
 
-if (isSelectingPiece=true)
-{
-	draw_sprite(spr_selecting_cell,0,x,y);
-	draw_sprite(pieceSprite,Piece_ID,x,y);
-	if x<(1024/2) 
-	{
-		if (Color = "White")
-		{
-			draw_sprite(spr_selecting_line,0,1024/2-283,y-230);
-		}
-		else
-		{
-			draw_sprite(spr_selecting_line,0,1024/2-283,y+230);
-		}
-	}
-	else
-	{
-		if (Color = "White")
-		{
-			draw_sprite(spr_selecting_line,0,1024/2+283,y-230);
-		}
-		else
-		{
-			draw_sprite(spr_selecting_line,0,1024/2+283,y+230);
-		}
-	}
-}
+//if (isSelectingPiece=true)
+//{
+//	draw_sprite(spr_selecting_cell,0,x,y);
+//	draw_sprite(pieceSprite,Piece_ID,x,y);
+//	if x<(1024/2) 
+//	{
+//		if (Color = "White")
+//		{
+//			draw_sprite(spr_selecting_line,0,1024/2-283,y+170);
+//		}
+//		else
+//		{
+//			draw_sprite(spr_selecting_line,0,1024/2-283,y+170);
+//		}
+//	}
+//	else
+//	{
+//		if (Color = "Black")
+//		{
+//			draw_sprite(spr_selecting_line,0,1024/2+283,y+970);
+//		}
+//		else
+//		{
+//			draw_sprite(spr_selecting_line,0,1024/2+283,y+970);
+//		}
+//	}
+//}
 

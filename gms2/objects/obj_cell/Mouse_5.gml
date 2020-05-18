@@ -169,9 +169,10 @@ if global.mode = 0
 	}
 else
 		// Pawn Change
+		// Click on the selected pieces and destroy the others - than go back to global mode 0 - 
 #region
 	{
-	if global.mode = 1
+	if (global.mode = 1) and (ID>=64) and (ID<=71)
 		{
 			global.Cell_Color=Color;
 			global.Piece_Index=Piece_ID;
@@ -191,5 +192,7 @@ else
 		moves_counter=moves_counter+1
 		
 		}
+		else
+		{}
 #endregion
 	}

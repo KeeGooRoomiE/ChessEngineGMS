@@ -18,4 +18,6 @@ if (global.scacco!=localScaccoCheck)
 	}
 }
 
+
+
 //keyboard_check_released(vk_space) = !global.Debug_Mode;

@@ -70,9 +70,9 @@ else		//if global.mode=1;
 {
 	//nothing here by this moment
 	
-	if (id = global.moveCell)
-	{
-		isSelectingPiece=true;
-	}
+	//if (id = global.Prev_Cell)
+	//{
+	//	isSelectingPiece=true;
+	//}
 }
   
