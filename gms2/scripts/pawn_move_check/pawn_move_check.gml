@@ -95,6 +95,9 @@ if argument0=0
 				}
 			}
 			#endregion;
+			
+			//check en_passant
+			en_passant(0)
 			 
 		#endregion;
 	 
@@ -185,6 +188,9 @@ if argument0=0
 				}
 			}
 			#endregion;
+			 
+			 //check en_passant
+			 en_passant(1)
 
 		#endregion;
 	    }
@@ -235,11 +241,10 @@ if argument0 = 1
 
 			 //White Check
 			if Color="White"
-				{	 
+				{	
+			//check take top left
 				#region
-		
-				//check take top left
-	
+
 				Returned=collision_point(x+sprite_width*1.5,y-sprite_height*0.5,obj_cell,false,true);
 				if (Returned!=noone)
 				{

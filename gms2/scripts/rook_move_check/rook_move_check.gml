@@ -20,7 +20,7 @@ while (Returned!=noone)
     {
         if Returned.Piece_ID!=5
         {   
-            //RReturned.NotSafe=true
+            //Returned.NotSafe=true
         } 
         break
     };
@@ -50,7 +50,7 @@ while Returned!=noone
 	{
 		if Returned.Piece_ID!=5
 			{
-			//RReturned.NotSafe=true
+			//Returned.NotSafe=true
 			} 
 			break
 		
@@ -81,7 +81,7 @@ while Returned!=noone
 	{
 		if Returned.Piece_ID!=5
 		{
-		//RReturned.NotSafe=true
+		//Returned.NotSafe=true
 		} 
 		break
 	};
@@ -126,8 +126,9 @@ while Returned!=noone
 	};
 	X-=sprite_width;
 }
-}
 #endregion
+//}
+
 
 //Castling Black left
 #region
@@ -263,7 +264,7 @@ if ID = 63 and Moves = 0 and global.Castling_B_done = 0
 		}
 
 #endregion
-
+}
 
 
 if argument0=1
@@ -349,7 +350,7 @@ if argument0=1
 			{
 				if Returned.Piece_ID!=5
 				{
-				//RReturned.NotSafe=true
+				//Returned.NotSafe=true
 				} 
 				break
 			};

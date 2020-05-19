@@ -22,7 +22,6 @@ if global.mode = 0
 								Moves++;
 								Notaz="-"
 							}
-					en_passant()
 					}
 					else if (Color = "White" && global.Cell_Color = "Black")
 						{
@@ -87,8 +86,8 @@ if global.mode = 0
 					Color = "Grey"
 					Piece_ID = -1
 					Moves++
-					store_moves[i]="0-0-0"
-					moves_counter=moves_counter+1
+					//store_moves[i]="0-0-0"
+					//moves_counter=moves_counter+1
 					with (global.Prev_Cell)
 						{
 						Color="Grey";
@@ -109,9 +108,6 @@ if global.mode = 0
 						Moves++;
 						}
 					global.Castling_B_done = 1
-					global.player = global.player*-1
-					
-
 				}
 			}
 		#endregion
@@ -126,8 +122,8 @@ if global.mode = 0
 					Color = "Grey"
 					Piece_ID = -1
 					Moves++;
-					store_moves[i]="0-0-0"
-					moves_counter=moves_counter+1
+					//store_moves[i]="0-0-0"
+					//moves_counter=moves_counter+1
 					with (global.Prev_Cell)
 						{
 						Color="Grey";
@@ -155,17 +151,26 @@ if global.mode = 0
 		
 		//En Passant
 		#region
-		//if (Passant = 1)
-		//	{
-		//	self.Color = "White"
-		//	self.Piece_ID = 0
-		//	instance_destroy(global.Prev_Pass)
-		//	instance_destroy(global.Passant_W_left)
-		//	instance_destroy(global.Passant_W_right)
-		//	}
-			
+		if (Passant = 1)
+			if (Color = "Grey")
+			{
+				Color = global.Cell_Color;
+				Piece_ID = global.Piece_Index;
+				Moves++;
+				Notaz="-"
+				with(global.Prev_Cell)
+				{
+				Color = "Grey"
+				Piece_ID = -1
+				}
+				with(global.Passant_B)
+				{
+				Color = "Grey"
+				Piece_ID = -1
+				}
+			reset_cells_state()
+			}
 		#endregion
-
 	}
 else
 		// Pawn Change
