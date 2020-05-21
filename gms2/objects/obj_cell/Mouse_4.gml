@@ -1,6 +1,7 @@
 ///Player move and behavior
 
-
+if (global.PlayerTurn = global.player)
+{
 if global.mode = 0
 {
 
@@ -128,3 +129,4 @@ else
 		}
 #endregion
 	}
+}

@@ -362,7 +362,7 @@
             "Key": "7474d64b-8c4d-4124-8c27-4a86ce9d3fcf",
             "Value": {
                 "id": "f89a8f65-68da-417f-beb6-e6e82a69ff73",
-                "resourcePath": "objects\\object10\\object10.yy",
+                "resourcePath": "objects\\obj_ai\\obj_ai.yy",
                 "resourceType": "GMObject"
             }
         },

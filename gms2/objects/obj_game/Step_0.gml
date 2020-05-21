@@ -18,6 +18,10 @@ if (global.scacco!=localScaccoCheck)
 	}
 }
 
+if (!instance_exists(obj_ai))
+{
+	global.PlayerTurn=global.player;
+};
 
 
 //keyboard_check_released(vk_space) = !global.Debug_Mode;

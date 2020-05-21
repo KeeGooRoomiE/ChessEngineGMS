@@ -10,6 +10,8 @@ global.mode = 0;
 global.scacco = false;
 global.moveCell=noone;
 
+global.PlayerTurn=global.player;
+
 localScaccoCheck=false;
 
 
