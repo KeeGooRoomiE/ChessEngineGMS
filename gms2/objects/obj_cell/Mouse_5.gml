@@ -58,6 +58,7 @@ if global.mode = 0
 							image_index = 0;
 							global.player = global.player*-1
 							Moves++;
+							
 						}
 					global.Next = BoardPos
 			
@@ -86,8 +87,8 @@ if global.mode = 0
 					Color = "Grey"
 					Piece_ID = -1
 					Moves++
-					//store_moves[i]="0-0-0"
-					//moves_counter=moves_counter+1
+					obj_game.store_moves[obj_game.moves_count]="0-0-0"
+					obj_game.moves_count++
 					with (global.Prev_Cell)
 						{
 						Color="Grey";
@@ -163,14 +164,32 @@ if global.mode = 0
 				Color = "Grey"
 				Piece_ID = -1
 				}
-				with(global.Passant_B)
+				if (id = global.LeftPass)
+					{
+						with(global.Passant_BLeft)
+						{
+						Color = "Grey"
+						Piece_ID = -1
+						}
+					}
+				else
 				{
-				Color = "Grey"
-				Piece_ID = -1
+					with(global.Passant_BRight)
+					{
+					Color = "Grey"
+					Piece_ID = -1
+					}
 				}
 			reset_cells_state()
 			}
 		#endregion
+	with (obj_cell)
+		{
+		if Enpass != 0
+			{
+				Enpass++
+			}
+		}
 	}
 else
 		// Pawn Change

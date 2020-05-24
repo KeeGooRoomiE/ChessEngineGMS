@@ -1,6 +1,7 @@
 ///@descr pawn_move_check(state);
 
 if argument0=0
+#region
 
 {
 	if (global.Selected=ID) 
@@ -25,12 +26,11 @@ if argument0=0
 						Returned.CanMove=false;
 					}
 				}
-				
-				#endregion;
 			}
+				#endregion;
+			
 			else
 			{
-			}
 			//check 2 steps
 			#region;
 			//check for the first one
@@ -60,10 +60,9 @@ if argument0=0
 						Returned.CanMove=false;
 					}
 				}
+			
 			#endregion;
-			};
-				
-
+			}
 	        //check take bottom right
 			#region;
 	        Returned=collision_point(x+sprite_width*1.5,y+sprite_height*1.5,obj_cell,false,true);
@@ -98,18 +97,18 @@ if argument0=0
 			
 			//check en_passant
 			en_passant(0)
-			 
+			
+		};	 
 		#endregion;
-	 
 
 	    //White Moves
 	    if Color="White"
 		{
 	     #region 
 	        //check 1 step
+			#region;
 			if (Moves>0)
 			{
-			#region;
 	            Returned=collision_point(x+sprite_width/2,y-sprite_height*0.5,obj_cell,false,true);
 	            if (Returned!=noone)
 				{
@@ -173,7 +172,7 @@ if argument0=0
 			}
 			#endregion;
 
-	         //check take top right
+	        //check take top right
 			 #region;
 	        Returned=collision_point(x-sprite_width*0.5,y-sprite_height*0.5,obj_cell,false,true);
 	        if (Returned!=noone)
@@ -189,84 +188,93 @@ if argument0=0
 			}
 			#endregion;
 			 
-			 //check en_passant
+			//check en_passant
 			 en_passant(1)
 
 		#endregion;
 	    }
 	}
 }
+#endregion
 
-
-// Not Safe Zone
+// Not Safe Zone (in step event)
 
 if argument0 = 1
+#region
 	{
 	if Piece_ID = 0
 		{
-
-
 			//Black Check
 
 			if Color="Black"
 			#region 
 			{
-
-				//check take bottom right
+			//check take bottom right
 				#region;
 				Returned=collision_point(x+sprite_width*1.5,y+sprite_height*1.5,obj_cell,false,true);
 				if (Returned!=noone)
 				{
-					if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
-					{
-						Returned.NotSafe=true;
-					}
+					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
+					//{
+						Returned.B_NotSafe=true;
+					//}
 				}
 				#endregion;
 
-				//check take bottom left
+			//check take bottom left
 				#region;
 				Returned=collision_point(x-sprite_width*0.5,y+sprite_height*1.5,obj_cell,false,true);
 				if (Returned!=noone)
 				{
-					if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
-					{
-						Returned.NotSafe=true;
-					}
+					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
+					//{
+						Returned.B_NotSafe=true;
+					//}
 		
 				}
 				#endregion;
+				
+			// en_passant
+			#region
+			//en_passant(3)
+			#endregion
+			
 			}			 
 			#endregion;
 
 			 //White Check
 			if Color="White"
-				{	
+			#region
+			#region
+			{	
 			//check take top left
-				#region
-
 				Returned=collision_point(x+sprite_width*1.5,y-sprite_height*0.5,obj_cell,false,true);
 				if (Returned!=noone)
 				{
-					if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
-					{
-						Returned.NotSafe=true;
-					}
+					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
+					//{
+						Returned.W_NotSafe=true;
+					//}
 				}
-				#endregion
+			#endregion
 	
 			//check take top right
 				#region
 				Returned=collision_point(x-sprite_width*0.5,y-sprite_height*0.5,obj_cell,false,true);
 				if (Returned!=noone)
 					{
-						if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
-						{
-							Returned.NotSafe=true;
-						}
+						//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
+						//{
+							Returned.W_NotSafe=true;
+						//}
 					}
 				#endregion
-				}
+			// en_passant
+			#region
+			//en_passant(4)
+			#endregion
+			}
+			#endregion
 		}
 	}
-
+#endregion

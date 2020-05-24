@@ -6,33 +6,28 @@
 	pieceSprite=s_segment1;
 	image_speed=0;
 	
-	//store_moves[0]=0;
-	//moves_counter=0;
-
-	//for (i=0; i<20; i++) //inits more than current and showing array wo errors
-	//{
-	//    store_moves[i]="";
-	//    moves_counter=i;
-	//}
+	CanMove=false;
+    CanTake=false;
+    Moves=0;
+    W_NotSafe=0;
+	B_NotSafe=0;
 	
-
 	Castling_B = 0;
 	Castling_W = 0;
 	global.Castling_B_done=0;
+	global.LeftPass = 0;
+	global.RightPass = 0;
 	global.Castling_W_done=0;
-	
+
 	Passant = 0
+	Enpass = 0
 	global.Passant_B2 = 0
 	global.Passant_B = 0
 	global.Prev_Pass = 0
 	
+
 	
-    CanMove=false;
-    CanTake=false;
 	
-    Moves=0;
-	
-    NotSafe=0;
     NotSafeAggressor=noone;
 	Protected=false;
     

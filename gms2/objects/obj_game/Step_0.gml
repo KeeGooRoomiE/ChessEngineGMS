@@ -1,4 +1,4 @@
-script_execute(s_controller_step_GML);
+//script_execute(s_controller_step_GML);
 
 mouse_string=global.Selected;
 

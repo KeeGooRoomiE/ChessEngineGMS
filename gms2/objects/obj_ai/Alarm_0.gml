@@ -1,11 +1,13 @@
 ///Waiting...
-
-if (Phase = 0)
+if global.AI = 1
 {
-	canStart=true;
-	Phase++;
-}
-else
-{
-	Phase++;	
+	if (Phase = 0)
+	{
+		canStart=true;
+		Phase++;
+	}
+	else
+	{
+		Phase++;	
+	}
 }

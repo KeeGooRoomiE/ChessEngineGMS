@@ -34,26 +34,32 @@
 //move piece
 //your turn
 
+if global.AI = 1
+	{
+	Phase = 0;
 
-Phase = 0;
 
+	canStart=false;
+	isEnded=false;
+	//
+	timeIsSet=false;
 
-canStart=false;
-isEnded=false;
-//
-timeIsSet=false;
+	startPiece=noone;
+	targetCell=noone;
 
-startPiece=noone;
-targetCell=noone;
+	myColor = global.player*(-1);
+	if (myColor)
+	{
+		time=irandom_range(1,6)*room_speed;
+	}
+	else
+	{
+		time=irandom_range(1,2)*room_speed;
+	}
 
-myColor = global.player*(-1);
-if (myColor)
-{
-	time=irandom_range(1,6)*room_speed;
-}
+	//array_length_1d(array);
+	}
 else
 {
-	time=irandom_range(1,2)*room_speed;
+	instance_destroy(self);
 }
-
-//array_length_1d(array);

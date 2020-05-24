@@ -1,7 +1,6 @@
  
 if global.mode = 0
 {
-
 	//Light up segments
 	#region
 
@@ -43,7 +42,7 @@ if global.mode = 0
 			{
 				image_index=6;
 			};	
-			if  (NotSafe=true) 
+			if  (W_NotSafe=true) or (B_NotSafe=true) 
 			{
 				image_index=7;
 			};	
@@ -53,16 +52,17 @@ if global.mode = 0
 	};
 	#endregion
 
-
 	//checks for a not safe position
+	
 	pawn_move_check(1)
 	rook_move_check(1)
 	knight_move_check(1)
 	bishop_move_check(1)
 	queen_move_check(1)
 	king_move_check(1)
+	king_move_check(2) //check for a global.scacco
 
-	king_move_check(2);   //check for a global.scacco
+	  
 	
 	pawn_change() // Pawn_change
 }
