@@ -2,6 +2,9 @@
 
 mouse_string=global.Selected;
 
+king_check()
+
+
 //Check for a changes in a King safety one time per situation
 if (global.scacco!=localScaccoCheck)
 {

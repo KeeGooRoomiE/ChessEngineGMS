@@ -20,8 +20,8 @@ if global.mode = 0
 								take=true
 								image_index = 0
 								Moves++;
-								Notaz="-"
 							}
+					//en_passant()
 					}
 					else if (Color = "White" && global.Cell_Color = "Black")
 						{
@@ -32,7 +32,7 @@ if global.mode = 0
 							take=true
 							image_index = 0
 							Moves++;
-							Notaz=":"
+							Action = ":"
 							}
 						}
 					else if (Color = "Black" && global.Cell_Color = "White")
@@ -44,7 +44,7 @@ if global.mode = 0
 							take=true
 							image_index = 0
 							Moves++;
-							Notaz=":"
+							Action = ":"
 					
 							}
 						}
@@ -58,17 +58,15 @@ if global.mode = 0
 							image_index = 0;
 							global.player = global.player*-1
 							Moves++;
-							
 						}
 					global.Next = BoardPos
 			
 					//drowing_move(mouse_x,mouse_y, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(BoardPos),c_black,1)
 			
-					//set_console(string(Color)+" player moves "+string(global.Piece_Data[Piece_ID,1])+" from "+string(global.Prev) +" to " +string(BoardPos));
 
-					obj_game.moves_count++;
-					obj_game.moves_array[obj_game.moves_count]=set_console(string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Notaz)+string(BoardPos))
+					set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Action) +string(BoardPos));
 
+			
 					reset_cells_state();
 			
 					}
@@ -87,8 +85,6 @@ if global.mode = 0
 					Color = "Grey"
 					Piece_ID = -1
 					Moves++
-					obj_game.store_moves[obj_game.moves_count]="0-0-0"
-					obj_game.moves_count++
 					with (global.Prev_Cell)
 						{
 						Color="Grey";
@@ -109,6 +105,8 @@ if global.mode = 0
 						Moves++;
 						}
 					global.Castling_B_done = 1
+					global.player = global.player*-1
+					set_console("0-0-0")
 				}
 			}
 		#endregion
@@ -123,8 +121,6 @@ if global.mode = 0
 					Color = "Grey"
 					Piece_ID = -1
 					Moves++;
-					//store_moves[i]="0-0-0"
-					//moves_counter=moves_counter+1
 					with (global.Prev_Cell)
 						{
 						Color="Grey";
@@ -145,7 +141,7 @@ if global.mode = 0
 						}
 					global.Castling_W_done = 1
 					global.player = global.player*-1
-					
+					set_console("0-0-0")
 				}
 			}
 		#endregion
@@ -153,54 +149,43 @@ if global.mode = 0
 		//En Passant
 		#region
 		if (Passant = 1)
-			if (Color = "Grey")
-			{
-				Color = global.Cell_Color;
-				Piece_ID = global.Piece_Index;
-				Moves++;
-				Notaz="-"
-				with(global.Prev_Cell)
-				{
-				Color = "Grey"
-				Piece_ID = -1
-				}
-				if (id = global.LeftPass)
-					{
-						with(global.Passant_BLeft)
-						{
-						Color = "Grey"
-						Piece_ID = -1
-						}
-					}
-				else
-				{
-					with(global.Passant_BRight)
-					{
-					Color = "Grey"
-					Piece_ID = -1
-					}
-				}
-			reset_cells_state()
-			}
-		#endregion
-	with (obj_cell)
 		{
-		if Enpass != 0
+			Piece_ID = global.Piece_Index
+			Color = global.Cell_Color
+			with (global.Prev_Cell)
 			{
-				Enpass++
+			Piece_ID = -1
+			Color = "Grey"
 			}
+			if (id = global.LeftPass)
+				{
+				with (global.Passant_BLeft)
+					{
+					Piece_ID = -1
+					Color = "Grey"
+					}
+				}
+				if (id = global.RightPass)
+				{
+				with (global.Passant_BRight)
+					{
+					Piece_ID = -1
+					Color = "Grey"
+					}	
+				}
 		}
+
+		#endregion
+
 	}
 else
 		// Pawn Change
-		// Click on the selected pieces and destroy the others - than go back to global mode 0 - 
 #region
 	{
-	if (global.mode = 1) and (ID>=64) and (ID<=71)
+	if global.mode = 1
 		{
 			global.Cell_Color=Color;
 			global.Piece_Index=Piece_ID;
-			global.moveCell=id;
 			with (global.Prev_Cell)
 				{
 				Color = global.Cell_Color
@@ -211,12 +196,6 @@ else
 		instance_destroy(global.temp3)
 		instance_destroy(global.temp4)
 		global.mode = 0
-		
-		store_moves[i]=set_console(+string(BoardPos)+string(global.Piece_Data[Piece_ID,1]))
-		moves_counter=moves_counter+1
-		
 		}
-		else
-		{}
 #endregion
 	}

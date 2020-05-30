@@ -60,7 +60,7 @@ if global.mode = 0
 	bishop_move_check(1)
 	queen_move_check(1)
 	king_move_check(1)
-	king_move_check(2) //check for a global.scacco
+	//king_move_check(2) //check for a global.scacco
 
 	  
 	

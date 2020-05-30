@@ -535,14 +535,6 @@
             }
         },
         {
-            "Key": "a2b30eb3-1acd-4001-bf33-67a651f58d82",
-            "Value": {
-                "id": "50f7c3f1-446a-4476-b3a3-0b9acce6dc68",
-                "resourcePath": "scripts\\rook_move_check_old\\rook_move_check_old.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "abdfeb33-c2ba-45d2-b403-2ddd0c740d1e",
             "Value": {
                 "id": "6f1a5787-cb3b-4c24-a460-a64bfe2cdc9d",
@@ -745,8 +737,8 @@
     ],
     "script_order": [
         "00f1bd55-a977-4b37-999d-dfc3ff832871",
-        "1968e2f5-b634-4cda-a38f-0e190f7f12df",
         "89253568-f200-4e27-8ea7-32e0a8b565c5",
+        "1968e2f5-b634-4cda-a38f-0e190f7f12df",
         "e1444df6-28d9-4e14-b2db-b79ca304447b",
         "8f573cfb-7130-46d7-adcb-cba5b0ae3570",
         "94d03139-9acb-460d-bbd5-0702d0d73c30",
@@ -756,7 +748,6 @@
         "7ce9ab23-b589-4a3d-a9bb-4cb1e2e591c6",
         "46eb8c59-2c58-4984-a9da-bac902362aa2",
         "d3daef11-709b-47ab-a510-e213d07f5f3b",
-        "a2b30eb3-1acd-4001-bf33-67a651f58d82",
         "1ef242b6-1a67-4008-869a-570981ceb167",
         "19fac050-78bb-4a03-8ccf-3a85a56d5186",
         "70773603-3e9f-493a-aeb6-fca538fafe9b",

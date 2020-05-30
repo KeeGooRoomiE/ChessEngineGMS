@@ -11,6 +11,7 @@
     Moves=0;
     W_NotSafe=0;
 	B_NotSafe=0;
+	Action = "-"
 	
 	Castling_B = 0;
 	Castling_W = 0;
