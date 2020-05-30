@@ -1,30 +1,26 @@
 //check if king is ok
-
-with (obj_cell)
-    {
-    if (Color = "White")
-        {
-        if (W_NotSafe=1) and (Piece_ID=5)
-            {
-            global.scacco=true;
-            }
-        else
-            {
-            global.scacco=false;
-            }
-        }
+if (Color = "White")
+{
+	if (W_NotSafe=true and Piece_ID=5)
+	{
+		global.scacco=true;
+    }
     else
+    {
+		global.scacco=false;
+    }
+}
+	else
+    {
+		if (Color = "Black")
         {
-        if (Color = "Black")
+			if (B_NotSafe=true and Piece_ID=5)
             {
-            if (B_NotSafe) and (Piece_ID=5)
-                {
-                global.scacco=true;
-                }
+				global.scacco=true;
+            }
             else
-                {
+            {
                 global.scacco=false;
-                }
             }
         }
     }

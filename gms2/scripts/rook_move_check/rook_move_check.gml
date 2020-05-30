@@ -281,7 +281,7 @@ if argument0=1
 			//Down
 			#region
 
-			Returned=0;
+			Returned=noone;
 
 			Y=y+sprite_height+1;
 

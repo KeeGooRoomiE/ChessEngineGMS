@@ -217,6 +217,12 @@ if argument0 = 1
 					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 					//{
 						Returned.B_NotSafe=true;
+						
+						///COME HERE TO SEE KING
+						with (Returned)
+						{
+							king_check();
+						};
 					//}
 				}
 				#endregion;
