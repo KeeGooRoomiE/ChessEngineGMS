@@ -13,7 +13,12 @@ else
 	draw_sprite(player,1,-465,-660)
 	}
 	
-draw_text_color(-465,-660,"Global.Scacco: " +string(global.scacco),c_red,c_red,c_red,c_red,1)
+draw_text_color(-465,-660,"scacco: " +string(global.scacco),c_red,c_red,c_red,c_red,1)
+draw_text_color(-465,-640,"player: " +string(global.player),c_red,c_red,c_red,c_red,1)
+draw_text_color(-465,-620,"this: " +string(global.Undo_Color),c_red,c_red,c_red,c_red,1)
+draw_text_color(-465,-600,"prev: " +string(global.Cell_Color),c_red,c_red,c_red,c_red,1)
+
+
 
 // 
 // Mouse Pos: 100,100

@@ -26,6 +26,8 @@
 	global.Passant_B = 0
 	global.Prev_Pass = 0
 	
+	global.Undo_Color = 0
+	global.Undo_ID = 0
 
 	
 	

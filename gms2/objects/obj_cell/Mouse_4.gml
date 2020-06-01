@@ -1,132 +1,383 @@
 ///Player move and behavior
 
-if (global.PlayerTurn = global.player)
+switch (global.mode)
 {
-if global.mode = 0
-{
-
-if global.player = 1
+case 0: // Regolar Game
 #region
-	{
-	if Color = "White"
+		if (global.PlayerTurn = global.player)
 		{
+			if global.player = 1
+			#region
+				{
+				if Color = "White"
+					{
 
-			global.Selected=ID;
-			global.Cell_Color=Color;
-			global.Piece_Index=Piece_ID;
-			global.Prev_Cell=id;
+						global.Selected=ID;
+						global.Cell_Color=Color;
+						global.Piece_Index=Piece_ID;
+						global.Prev_Cell=id;
 
-			global.move=true
-			//global.moveCell=id;
+						global.move=true
+						//global.moveCell=id;
 			
-			global.Prev = BoardPos
+						global.Prev = BoardPos
 			
-			global.cast1c = id
-			global.cast1d = id
+						global.cast1c = id
+						global.cast1d = id
 
 	
-			reset_cells_state();
+						reset_cells_state();
 
-			if (Piece_ID = 0)
-				{
-					pawn_move_check(0);
+						if (Piece_ID = 0)
+							{
+								pawn_move_check(0);
+							}
+						if (Piece_ID = 1)
+							{
+								rook_move_check(0);
+							}	
+						if (Piece_ID = 3)
+							{
+								bishop_move_check(0);
+							}
+						if (Piece_ID = 4)
+							{
+								queen_move_check(0);
+							}
+						if (Piece_ID = 5)
+							{
+								king_move_check(0);
+							}	
+						if (Piece_ID = 2)
+							{
+								knight_move_check(0);
+							}
+					}
 				}
-			if (Piece_ID = 1)
-				{
-					rook_move_check(0);
-				}	
-			if (Piece_ID = 3)
-				{
-					bishop_move_check(0);
-				}
-			if (Piece_ID = 4)
-				{
-					queen_move_check(0);
-				}
-			if (Piece_ID = 5)
-				{
-					king_move_check(0);
-				}	
-			if (Piece_ID = 2)
-				{
-					knight_move_check(0);
-				}
-		}
-	}
-#endregion
+			#endregion
 
-if global.player = -1
-#region
-	{
-	if Color = "Black"
-		{
+			if global.player = -1
+			#region
+				{
+				if Color = "Black"
+					{
 
-			global.Selected=ID;
+						global.Selected=ID;
 
-			global.Cell_Color=Color;
+						global.Cell_Color=Color;
 
-			global.Piece_Index=Piece_ID;
-			global.Prev_Cell=id;
+						global.Piece_Index=Piece_ID;
+						global.Prev_Cell=id;
 
-			global.move=true;
-			//global.moveCell=id;
+						global.move=true;
+						//global.moveCell=id;
 			
-			global.Prev = BoardPos
+						global.Prev = BoardPos
 			
-			global.cast1a = id
-			global.cast1b = id
+						global.cast1a = id
+						global.cast1b = id
 
 	
-			reset_cells_state();
+						reset_cells_state();
 
-			if (Piece_ID = 0)
-				{
-					pawn_move_check(0);
+						if (Piece_ID = 0)
+							{
+								pawn_move_check(0);
+							}
+						if (Piece_ID = 1)
+							{
+								rook_move_check(0);
+							}	
+						if (Piece_ID = 3)
+							{
+								bishop_move_check(0);
+							}
+						if (Piece_ID = 4)
+							{
+								queen_move_check(0);
+							}
+						if (Piece_ID = 5)
+							{
+								king_move_check(0);
+							}	
+						if (Piece_ID = 2)
+							{
+								knight_move_check(0);
+							}
+					}
 				}
-			if (Piece_ID = 1)
-				{
-					rook_move_check(0);
-				}	
-			if (Piece_ID = 3)
-				{
-					bishop_move_check(0);
-				}
-			if (Piece_ID = 4)
-				{
-					queen_move_check(0);
-				}
-			if (Piece_ID = 5)
-				{
-					king_move_check(0);
-				}	
-			if (Piece_ID = 2)
-				{
-					knight_move_check(0);
-				}
+			#endregion	
 		}
-	}
+		break;
 #endregion
 
-}
-// Pawn change
-else
-	{
+case 1: // Pawn Change
 #region
-	if global.mode = 1
-		{
-			global.Cell_Color=Color;
-			global.Piece_Index=Piece_ID;
-			with (global.Prev_Cell)
-				{
-				Color = global.Cell_Color
-				Piece_ID = global.Piece_Index
-				}
+		global.Cell_Color=Color;
+		global.Piece_Index=Piece_ID;
+		with (global.Prev_Cell)
+			{
+			Color = global.Cell_Color
+			Piece_ID = global.Piece_Index
+			}
 		instance_destroy(global.temp1)
 		instance_destroy(global.temp2)
 		instance_destroy(global.temp3)
 		instance_destroy(global.temp4)
 		global.mode = 0
-		}
 #endregion
-	}
+break;
+
+case 2: // Scacco
+		#region
+		if (global.PlayerTurn = global.player)
+		{
+			if global.player = 1
+			#region
+				{
+				if Color = "White"
+					{
+
+						global.Selected=ID;
+						global.Cell_Color=Color;
+						global.Piece_Index=Piece_ID;
+						global.Prev_Cell=id;
+
+						global.move=true
+						//global.moveCell=id;
+			
+						global.Prev = BoardPos
+			
+						global.cast1c = id
+						global.cast1d = id
+
+	
+						reset_cells_state();
+
+						if (Piece_ID = 0)
+							{
+								pawn_move_check(0);
+							}
+						if (Piece_ID = 1)
+							{
+								rook_move_check(0);
+							}	
+						if (Piece_ID = 3)
+							{
+								bishop_move_check(0);
+							}
+						if (Piece_ID = 4)
+							{
+								queen_move_check(0);
+							}
+						if (Piece_ID = 5)
+							{
+								king_move_check(0);
+							}	
+						if (Piece_ID = 2)
+							{
+								knight_move_check(0);
+							}
+					}
+				}
+			#endregion
+
+			if global.player = -1
+			#region
+				{
+				if Color = "Black"
+					{
+
+						global.Selected=ID;
+
+						global.Cell_Color=Color;
+
+						global.Piece_Index=Piece_ID;
+						global.Prev_Cell=id;
+
+						global.move=true;
+						//global.moveCell=id;
+			
+						global.Prev = BoardPos
+			
+						global.cast1a = id
+						global.cast1b = id
+
+	
+						reset_cells_state();
+
+						if (Piece_ID = 0)
+							{
+								pawn_move_check(0);
+							}
+						if (Piece_ID = 1)
+							{
+								rook_move_check(0);
+							}	
+						if (Piece_ID = 3)
+							{
+								bishop_move_check(0);
+							}
+						if (Piece_ID = 4)
+							{
+								queen_move_check(0);
+							}
+						if (Piece_ID = 5)
+							{
+								king_move_check(0);
+							}	
+						if (Piece_ID = 2)
+							{
+								knight_move_check(0);
+							}
+					}
+				}
+			#endregion	
+		}
+		break;
+#endregion
+
+
+
+break;
+
 }
+
+
+
+
+
+
+
+
+
+//if (global.PlayerTurn = global.player)
+//{
+//if global.mode = 0
+//{
+
+//if global.player = 1
+//#region
+//	{
+//	if Color = "White"
+//		{
+
+//			global.Selected=ID;
+//			global.Cell_Color=Color;
+//			global.Piece_Index=Piece_ID;
+//			global.Prev_Cell=id;
+
+//			global.move=true
+//			//global.moveCell=id;
+			
+//			global.Prev = BoardPos
+			
+//			global.cast1c = id
+//			global.cast1d = id
+
+	
+//			reset_cells_state();
+
+//			if (Piece_ID = 0)
+//				{
+//					pawn_move_check(0);
+//				}
+//			if (Piece_ID = 1)
+//				{
+//					rook_move_check(0);
+//				}	
+//			if (Piece_ID = 3)
+//				{
+//					bishop_move_check(0);
+//				}
+//			if (Piece_ID = 4)
+//				{
+//					queen_move_check(0);
+//				}
+//			if (Piece_ID = 5)
+//				{
+//					king_move_check(0);
+//				}	
+//			if (Piece_ID = 2)
+//				{
+//					knight_move_check(0);
+//				}
+//		}
+//	}
+//#endregion
+
+//if global.player = -1
+//#region
+//	{
+//	if Color = "Black"
+//		{
+
+//			global.Selected=ID;
+
+//			global.Cell_Color=Color;
+
+//			global.Piece_Index=Piece_ID;
+//			global.Prev_Cell=id;
+
+//			global.move=true;
+//			//global.moveCell=id;
+			
+//			global.Prev = BoardPos
+			
+//			global.cast1a = id
+//			global.cast1b = id
+
+	
+//			reset_cells_state();
+
+//			if (Piece_ID = 0)
+//				{
+//					pawn_move_check(0);
+//				}
+//			if (Piece_ID = 1)
+//				{
+//					rook_move_check(0);
+//				}	
+//			if (Piece_ID = 3)
+//				{
+//					bishop_move_check(0);
+//				}
+//			if (Piece_ID = 4)
+//				{
+//					queen_move_check(0);
+//				}
+//			if (Piece_ID = 5)
+//				{
+//					king_move_check(0);
+//				}	
+//			if (Piece_ID = 2)
+//				{
+//					knight_move_check(0);
+//				}
+//		}
+//	}
+//#endregion
+
+//}
+//// Pawn change
+//else
+//	{
+//#region
+//	if global.mode = 1
+//		{
+//			global.Cell_Color=Color;
+//			global.Piece_Index=Piece_ID;
+//			with (global.Prev_Cell)
+//				{
+//				Color = global.Cell_Color
+//				Piece_ID = global.Piece_Index
+//				}
+//		instance_destroy(global.temp1)
+//		instance_destroy(global.temp2)
+//		instance_destroy(global.temp3)
+//		instance_destroy(global.temp4)
+//		global.mode = 0
+//		}
+//#endregion
+//	}
+//}

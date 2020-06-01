@@ -260,10 +260,12 @@ if Piece_ID = 2
 		    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 			    {
 			        Returned.W_NotSafe=true
+					king_check();
 			    };
 		    if (Returned!=noone) and (Returned.Color!=Color)
 			    {
 			        Returned.W_NotSafe=true
+					king_check();
 			    };
 
 		#endregion;
@@ -287,11 +289,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.W_NotSafe=true 
+				Returned.W_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.W_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -314,11 +318,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.W_NotSafe=true 
+				Returned.W_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.W_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -342,12 +348,14 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.W_NotSafe=true 
+				Returned.W_NotSafe=true
+				king_check();
 
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.W_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -372,10 +380,12 @@ if Piece_ID = 2
 		    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 		    {
 		        Returned.W_NotSafe=true
+				king_check();
 		    };
 		    if (Returned!=noone) and (Returned.Color!=Color)
 		    {
 		        Returned.W_NotSafe=true
+				king_check();
 		    };
 
 		#endregion;
@@ -398,11 +408,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 				{
-					Returned.W_NotSafe=true 
+					Returned.W_NotSafe=true
+					king_check();
 				};
 			if (Returned!=noone) and (Returned.Color!=Color)
 				{
 					Returned.W_NotSafe=true
+					king_check();
 				};
 
 		#endregion
@@ -425,11 +437,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.W_NotSafe=true 
+				Returned.W_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.W_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -452,11 +466,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.W_NotSafe=true 
+				Returned.W_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.W_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -486,10 +502,12 @@ if Piece_ID = 2
 		    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 			    {
 			        Returned.B_NotSafe=true
+					king_check();
 			    };
 		    if (Returned!=noone) and (Returned.Color!=Color)
 			    {
 			        Returned.B_NotSafe=true
+					king_check();
 			    };
 
 		#endregion;
@@ -513,11 +531,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.B_NotSafe=true 
+				Returned.B_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.B_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -540,11 +560,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.B_NotSafe=true 
+				Returned.B_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.B_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -568,12 +590,14 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.B_NotSafe=true 
+				Returned.B_NotSafe=true
+				king_check();
 
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.B_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -598,10 +622,12 @@ if Piece_ID = 2
 		    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 		    {
 		        Returned.B_NotSafe=true
+				king_check();
 		    };
 		    if (Returned!=noone) and (Returned.Color!=Color)
 		    {
 		        Returned.B_NotSafe=true
+				king_check();
 		    };
 
 		#endregion;
@@ -624,11 +650,14 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 				{
-					Returned.B_NotSafe=true 
+					Returned.B_NotSafe=true
+					king_check();
+					
 				};
 			if (Returned!=noone) and (Returned.Color!=Color)
 				{
 					Returned.B_NotSafe=true
+					king_check();
 				};
 
 		#endregion
@@ -651,11 +680,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.B_NotSafe=true 
+				Returned.B_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.B_NotSafe=true
+				king_check();
 			};
 
 		#endregion
@@ -678,11 +709,13 @@ if Piece_ID = 2
 			};
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
-				Returned.B_NotSafe=true 
+				Returned.B_NotSafe=true
+				king_check();
 			};
 			if (Returned!=noone) and (Returned.Color!=Color)
 			{
 				Returned.B_NotSafe=true
+				king_check();
 			};
 
 		#endregion

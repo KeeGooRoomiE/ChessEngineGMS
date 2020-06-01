@@ -217,12 +217,7 @@ if argument0 = 1
 					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 					//{
 						Returned.B_NotSafe=true;
-						
-						///COME HERE TO SEE KING
-						with (Returned)
-						{
-							king_check();
-						};
+						king_check();
 					//}
 				}
 				#endregion;
@@ -235,6 +230,7 @@ if argument0 = 1
 					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 					//{
 						Returned.B_NotSafe=true;
+						king_check();
 					//}
 		
 				}
@@ -251,15 +247,17 @@ if argument0 = 1
 			 //White Check
 			if Color="White"
 			#region
+			//check take top left
 			#region
 			{	
-			//check take top left
+
 				Returned=collision_point(x+sprite_width*1.5,y-sprite_height*0.5,obj_cell,false,true);
 				if (Returned!=noone)
 				{
 					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 					//{
 						Returned.W_NotSafe=true;
+						king_check();
 					//}
 				}
 			#endregion
@@ -272,9 +270,11 @@ if argument0 = 1
 						//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 						//{
 							Returned.W_NotSafe=true;
+							king_check();
 						//}
 					}
 				#endregion
+				
 			// en_passant
 			#region
 			//en_passant(4)

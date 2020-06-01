@@ -16,6 +16,8 @@ global.mode = 0;
 
 global.player = 1
 
+global.scacco = 0
+
 localScaccoCheck = 0
 
 mouse_string="";
