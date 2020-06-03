@@ -281,22 +281,22 @@ case 2: // Scacco
 			#region
 
 			if (CanMove or CanTake)
+			{
+				take = false
+				if (Color = "Grey" && global.Cell_Color != "Grey")
 				{
-					take = false
-						if (Color = "Grey" && global.Cell_Color != "Grey")
-						{
-							if CanMove = true
-								{
-									Color = global.Cell_Color;
-									Piece_ID = global.Piece_Index;
-									take=true
-									image_index = 0
-									Moves++;
-								}
-						}
-						else if (Color = "White" && global.Cell_Color = "Black")
-							{
-							if CanTake = true
+					if CanMove = true
+					{
+						Color = global.Cell_Color;
+						Piece_ID = global.Piece_Index;
+						take=true
+						image_index = 0
+						Moves++;
+					}
+				}
+				else if (Color = "White" && global.Cell_Color = "Black")
+				{
+					if CanTake = true
 								{
 								Color = global.Cell_Color;
 								Piece_ID = global.Piece_Index;
@@ -331,6 +331,54 @@ case 2: // Scacco
 								//global.player = global.player*-1
 							}
 						global.Next = BoardPos
+						
+						//Check black king to sucsessful out of scacco
+						if (global.B_ScaccoKing != noone)
+						{
+							with (global.B_ScaccoKing)
+							{
+								if (B_NotSafe=1)
+								{
+									BOutOfScacco=false;
+									set_console("BOOS false: "+string(BOutOfScacco));
+								}
+								else
+								{
+									//global.scacco=false;
+									BOutOfScacco=true;
+									set_console("BOOS true"+string(BOutOfScacco));
+									global.B_ScaccoKing=noone;
+								}
+							}
+						}
+						else
+						{
+							set_console("404 BKing not found");
+						}
+						
+						//For the white too ^(upper code)
+						if (global.W_ScaccoKing != noone)
+						{
+							with(global.W_ScaccoKing)
+							{
+								if (W_NotSafe=1)
+								{
+									WOutOfScacco=false;
+									set_console("WOOS false"+string(WOutOfScacco));
+								}
+								else
+								{
+									//global.scacco=false;
+									WOutOfScacco=true;
+									set_console("WOOS true"+string(WOutOfScacco));
+									global.W_ScaccoKing=noone;
+								}
+							}
+						}
+						else
+						{
+							set_console("404 WKing not found");
+						}
 
 						set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Action) +string(BoardPos));
 			
@@ -446,22 +494,46 @@ case 2: // Scacco
 			
 						
 			// if still scacco than Undo
+			
+			//TODO: GDFix
 			#region
 			
-			if global.scacco = 1
+			if (global.scacco = 1)
+			{
+				//undo the move
+				if (!BOutOfScacco and !WOutOfScacco)
 				{
-				with (global.Undo_Cell)
+					with (global.Undo_Cell)
 					{
-					Color = global.Undo_Color
-					Piece_ID = global.Undo_ID
+						Color = global.Undo_Color
+						Piece_ID = global.Undo_ID
 					}
-				with (global.Prev_Cell)
+					with (global.Prev_Cell)
 					{
-					Color = global.Cell_Color;
-					Piece_ID = global.Piece_Index;
+						Color = global.Cell_Color;
+						Piece_ID = global.Piece_Index;
 					}
-				global.player = global.player*-1
+				
+				set_console("Revert last move");
+				
+				global.player = global.player;
+				
 				}
+				else
+				{
+					global.scacco=0;
+					global.mode=0;
+					global.player= - global.player;
+				}
+			}
+			else
+			{
+				//setting to common moves
+				global.mode = 0
+				global.player = -global.player;
+				//TODO: Delete doublecheck
+				set_console("You re out of scacco")
+			}
 			#endregion
 
 
@@ -469,37 +541,37 @@ case 2: // Scacco
 			//Check if still scacco
 			#region
 			
-			with (obj_cell)
-			{
+			//with (obj_cell)
+			//{
 
-				if (Color = "Black")
-				{
-					if (W_NotSafe=1 and Piece_ID=5)
-					{
-						global.scacco = 1
-				    }
-				    else
-				    {
-						global.scacco = 0;
-						global.mode = 0
-				    }
-				}
-				else
-				{
-					if (Color = "White")
-				    {
-						if (B_NotSafe=1 and Piece_ID=5)
-				        {
-							global.scacco = 1;	
-						}
-				     }
-				     else
-					{
-				        global.scacco = 0;
-						global.mode = 0
-				    }
-				}
-			}
+			//	if (Color = "Black")
+			//	{
+			//		if (W_NotSafe=1 and Piece_ID=5)
+			//		{
+			//			global.scacco = 1
+			//	    }
+			//	    else
+			//	    {
+			//			global.scacco = 0;
+			//			global.mode = 0
+			//	    }
+			//	}
+			//	else
+			//	{
+			//		if (Color = "White")
+			//	    {
+			//			if (B_NotSafe=1 and Piece_ID=5)
+			//	        {
+			//				global.scacco = 1;	
+			//			}
+			//	     }
+			//	     else
+			//		{
+			//	        global.scacco = 0;
+			//			global.mode = 0
+			//	    }
+			//	}
+			//}
 			#endregion
 			
 break;

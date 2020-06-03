@@ -27,10 +27,16 @@
 	global.Passant_B2 = 0
 	global.Passant_B = 0
 	global.Prev_Pass = 0
-	
+
+	WOutOfScacco=true;
+	BOutOfScacco=true;
+
 	global.Undo_Color = 0
 	global.Undo_ID = 0
 	global.Undo_Cell = id
+	
+	global.B_ScaccoKing=noone;
+	global.W_ScaccoKing=noone;
 
 	
 	

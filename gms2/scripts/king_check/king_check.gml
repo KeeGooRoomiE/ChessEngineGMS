@@ -11,6 +11,7 @@ with (Returned)
 		{
 			global.scacco = 1
 			global.mode = 2
+			global.B_ScaccoKing=Returned;
 	    }
 	    else
 	    {
@@ -25,6 +26,7 @@ with (Returned)
 	        {
 				global.scacco = 1;
 				global.mode = 2
+				global.W_ScaccoKing=Returned;
 	        }
 	        else
 	        {
