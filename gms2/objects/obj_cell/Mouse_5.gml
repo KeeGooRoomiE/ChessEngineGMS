@@ -77,9 +77,9 @@ case 0: // Regolar Game
 
 			#endregion
 
-			//Castling Black
+			//Castling Black Left
 			#region
-			if Castling_B = 1
+			if Castling_BLeft = 1
 				{
 				if (Piece_ID = 5 && Color = "Black")
 					{
@@ -112,10 +112,46 @@ case 0: // Regolar Game
 					}
 				}
 			#endregion
-
-			//Castling White
+			
+			//Castling Black Right
 			#region
-			if Castling_W = 1
+			if Castling_BRight = 1
+				{
+				if (Piece_ID = 5 && Color = "Black")
+					{
+						Castling_B = 0
+						Color = "Grey"
+						Piece_ID = -1
+						Moves++
+						with (global.Prev_Cell)
+							{
+							Color="Grey";
+							Piece_ID=-1;
+							image_index = 0;
+							Moves++;
+							}	
+						with (global.cast1a)
+							{
+							Color= "Black";
+							Piece_ID = 5;
+							Moves++;
+							}
+						with (global.cast1b)
+							{
+							Color= "Black";
+							Piece_ID = 1;
+							Moves++;
+							}
+						global.Castling_B_done = 1
+						global.player = global.player*-1
+						set_console("0-0")
+					}
+				}
+			#endregion
+
+			//Castling White Left
+			#region
+			if Castling_WLeft = 1
 				{
 				if (Piece_ID = 5 && Color = "White")
 					{
@@ -144,6 +180,41 @@ case 0: // Regolar Game
 						global.Castling_W_done = 1
 						global.player = global.player*-1
 						set_console("0-0-0")
+					}
+				}
+			#endregion
+			
+			//Castling White Right
+			#region
+			if Castling_WRight = 1
+				{
+				if (Piece_ID = 5 && Color = "White")
+					{
+						Castling_W = 0
+						Color = "Grey"
+						Piece_ID = -1
+						Moves++;
+						with (global.Prev_Cell)
+							{
+							Color="Grey";
+							Piece_ID=-1;
+							image_index = 0;
+							Moves++;
+							}	
+
+						with (global.cast1c)
+							{
+							Color= "White";
+							Piece_ID = 5;
+							}
+						with (global.cast1d)
+							{
+							Color= "White";
+							Piece_ID = 1;
+							}
+						global.Castling_W_done = 1
+						global.player = global.player*-1
+						set_console("0-0")
 					}
 				}
 			#endregion
@@ -199,11 +270,12 @@ break;
 #endregion
 
 case 2: // Scacco
-			
-			
+#region
+		
 			global.Selected=ID;
 			global.Undo_Color = Color
 			global.Undo_ID = Piece_ID
+			global.Undo_Cell = id
 
 			//Move and Take
 			#region
@@ -221,7 +293,6 @@ case 2: // Scacco
 									image_index = 0
 									Moves++;
 								}
-						//en_passant()
 						}
 						else if (Color = "White" && global.Cell_Color = "Black")
 							{
@@ -256,16 +327,12 @@ case 2: // Scacco
 								Color="Grey";
 								Piece_ID=-1;
 								image_index = 0;
-								global.player = global.player*-1
 								Moves++;
+								//global.player = global.player*-1
 							}
 						global.Next = BoardPos
-			
-						//drowing_move(mouse_x,mouse_y, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(BoardPos),c_black,1)
-			
 
 						set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Action) +string(BoardPos));
-
 			
 						reset_cells_state();
 			
@@ -376,7 +443,32 @@ case 2: // Scacco
 			}
 
 			#endregion
+			
+						
+			// if still scacco than Undo
+			#region
+			
+			if global.scacco = 1
+				{
+				with (global.Undo_Cell)
+					{
+					Color = global.Undo_Color
+					Piece_ID = global.Undo_ID
+					}
+				with (global.Prev_Cell)
+					{
+					Color = global.Cell_Color;
+					Piece_ID = global.Piece_Index;
+					}
+				global.player = global.player*-1
+				}
+			#endregion
 
+
+			
+			//Check if still scacco
+			#region
+			
 			with (obj_cell)
 			{
 
@@ -389,6 +481,7 @@ case 2: // Scacco
 				    else
 				    {
 						global.scacco = 0;
+						global.mode = 0
 				    }
 				}
 				else
@@ -397,36 +490,19 @@ case 2: // Scacco
 				    {
 						if (B_NotSafe=1 and Piece_ID=5)
 				        {
-							global.scacco = 1;
-				        }
-				        else
-				        {
-				            global.scacco = 0;
-				        }
+							global.scacco = 1;	
+						}
+				     }
+				     else
+					{
+				        global.scacco = 0;
+						global.mode = 0
 				    }
 				}
 			}
+			#endregion
 			
-			if global.scacco = 1
-			{
-			Color = global.Undo_Color
-			Piece_ID = global.Undo_ID
-			with (global.Prev_Cell)
-				{
-				Color = global.Cell_Color;
-				Piece_ID = global.Piece_Index;
-				}
-			global.player = global.player*-1
-			}
-			else
-			{
-			global.mode = 0
-			
-			}
-			
-			
-			
-
 break;
+#endregion
 
 }

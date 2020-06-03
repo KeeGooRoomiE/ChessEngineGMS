@@ -13,8 +13,10 @@
 	B_NotSafe=0;
 	Action = "-"
 	
-	Castling_B = 0;
-	Castling_W = 0;
+	Castling_BRight = 0;
+	Castling_BLeft = 0;
+	Castling_WRight = 0;
+	Castling_WLeft = 0;
 	global.Castling_B_done=0;
 	global.LeftPass = 0;
 	global.RightPass = 0;
@@ -28,6 +30,7 @@
 	
 	global.Undo_Color = 0
 	global.Undo_ID = 0
+	global.Undo_Cell = id
 
 	
 	

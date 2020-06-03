@@ -139,26 +139,26 @@ if ID = 0 and Moves = 0 and global.Castling_B_done = 0
 		Returned=0;
 		X=x+sprite_width+1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-		if (Returned.Piece_ID=-1)
+		if (Returned.Piece_ID=-1) and (Returned.B_NotSafe = 0)
 			{
 			Returned.CanMove=true;
 			global.cast1a = Returned.id
 			X+=sprite_width;
 			Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-			if (Returned.Piece_ID=-1)
+			if (Returned.Piece_ID=-1) and (Returned.B_NotSafe = 0)
 				{
 				Returned.CanMove=true;
 				global.cast1b = Returned.id
 				X+=sprite_width;
 				Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-				if (Returned.Piece_ID=-1)
+				if (Returned.Piece_ID=-1) and (Returned.B_NotSafe = 0)
 					{
 					Returned.CanMove=true;
 					X+=sprite_width;
 					Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-					if (Returned.Piece_ID=5) and (Returned.Moves=0)
+					if (Returned.Piece_ID=5) and (Returned.Moves=0) and (Returned.B_NotSafe = 0)
 						{
-						Returned.Castling_B=1
+						Returned.Castling_BLeft=1
 						}
 					}
 				}
@@ -175,22 +175,22 @@ if ID = 7 and Moves = 0 and global.Castling_B_done = 0
 		Returned=0;
 		X=x-1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-		if (Returned.Piece_ID=-1)
+		if (Returned.Piece_ID=-1) and (Returned.B_NotSafe = 0)
 			{
 			Returned.CanMove=true;
 			global.cast1a = Returned.id
 			X-=sprite_width;
 			
 			Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-			if (Returned.Piece_ID=-1)
+			if (Returned.Piece_ID=-1) and (Returned.B_NotSafe = 0)
 				{
 				Returned.CanMove=true;
 				global.cast1b = Returned.id
 				X-=sprite_width;
 				Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-				if (Returned.Piece_ID=5) and (Returned.Moves=0)
+				if (Returned.Piece_ID=5) and (Returned.Moves=0) and (Returned.B_NotSafe = 0)
 					{
-					Returned.Castling_B=1
+					Returned.Castling_BRight=1
 					}
 				}
 			}
@@ -206,26 +206,26 @@ if ID = 56 and Moves = 0 and global.Castling_W_done = 0
 		Returned=0;
 		X=x+sprite_width+1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-		if (Returned.Piece_ID=-1)
+		if (Returned.Piece_ID=-1) and (Returned.W_NotSafe = 0)
 			{
 			Returned.CanMove=true;
 			global.cast1c = Returned.id
 			X+=sprite_width;
 			Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-			if (Returned.Piece_ID=-1)
+			if (Returned.Piece_ID=-1) and (Returned.W_NotSafe = 0)
 				{
 				Returned.CanMove=true;
 				global.cast1d = Returned.id
 				X+=sprite_width;
 				Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-				if (Returned.Piece_ID=-1)
+				if (Returned.Piece_ID=-1) and (Returned.W_NotSafe = 0)
 					{
 					Returned.CanMove=true;
 					X+=sprite_width;
 					Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-					if (Returned.Piece_ID=5) and (Returned.Moves=0)
+					if (Returned.Piece_ID=5) and (Returned.Moves=0) and (Returned.W_NotSafe = 0)
 						{
-						Returned.Castling_W=1
+						Returned.Castling_WLeft=1
 						}
 					}
 				}
@@ -243,22 +243,22 @@ if ID = 63 and Moves = 0 and global.Castling_B_done = 0
 		Returned=0;
 		X=x-1;
 		Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-		if (Returned.Piece_ID=-1)
+		if (Returned.Piece_ID=-1) and (Returned.W_NotSafe = 0)
 			{
 			Returned.CanMove=true;
 			global.cast1c = Returned.id
 			X-=sprite_width;
 			
 			Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-			if (Returned.Piece_ID=-1)
+			if (Returned.Piece_ID=-1) and (Returned.W_NotSafe = 0)
 				{
 				Returned.CanMove=true;
 				global.cast1d = Returned.id
 				X-=sprite_width;
 				Returned=collision_point(X,y+sprite_height*0.5,obj_cell,false,true);
-				if (Returned.Piece_ID=5) and (Returned.Moves=0)
+				if (Returned.Piece_ID=5) and (Returned.Moves=0) and (Returned.W_NotSafe = 0)
 					{
-					Returned.Castling_W=1
+					Returned.Castling_WRight=1
 					}
 				}
 			}
