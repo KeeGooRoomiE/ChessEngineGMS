@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "bcf8c446-3791-4096-a30f-5801844ba0a7",
+            "Value": {
+                "id": "ee2ce60d-5457-4769-99ec-6d989681946d",
+                "resourcePath": "scripts\\Undo_Scacco\\Undo_Scacco.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "be68bc64-a471-473d-9619-15c83919d456",
             "Value": {
                 "id": "0e5d0618-3eb4-46d7-8d6a-7024ec6d3d4c",
@@ -757,6 +765,7 @@
         "5a6d2cfe-1285-4381-b235-70d3b168f7a7",
         "064e9871-eba9-4a8f-854e-b8db9e65939b",
         "e3d8f7f9-58b3-4b4c-a5c7-58cd708c6e19",
+        "bcf8c446-3791-4096-a30f-5801844ba0a7",
         "6e157dd0-6e02-4672-a1ee-7f31dc56314b",
         "9ff4f093-c93f-435a-829c-c23904817d47",
         "c97103b2-d727-40a7-a58c-ac0b81d94962",

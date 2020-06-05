@@ -23,7 +23,6 @@ case 0: // Regolar Game
 									image_index = 0
 									Moves++;
 								}
-						//en_passant()
 						}
 						else if (Color = "White" && global.Cell_Color = "Black")
 							{
@@ -330,24 +329,32 @@ case 2: // Scacco
 								Moves++;
 								//global.player = global.player*-1
 							}
+						
 						global.Next = BoardPos
+						}
 						
 						//Check black king to sucsessful out of scacco
+						
 						if (global.B_ScaccoKing != noone)
 						{
 							with (global.B_ScaccoKing)
 							{
-								if (B_NotSafe=1)
+								if (B_NotSafe = 1)
 								{
+									
 									BOutOfScacco=false;
 									set_console("BOOS false: "+string(BOutOfScacco));
+									Undo_Scacco()
+									
 								}
 								else
 								{
-									//global.scacco=false;
+									set_console(+string(global.B_ScaccoKing.Piece_ID)+string(global.B_ScaccoKing.Color))
+									global.scacco=false;
 									BOutOfScacco=true;
 									set_console("BOOS true"+string(BOutOfScacco));
 									global.B_ScaccoKing=noone;
+									Undo_Scacco()
 								}
 							}
 						}
@@ -363,15 +370,19 @@ case 2: // Scacco
 							{
 								if (W_NotSafe=1)
 								{
+									set_console(+string(global.W_ScaccoKing.Piece_ID)+string(global.W_ScaccoKing.Color))
 									WOutOfScacco=false;
 									set_console("WOOS false"+string(WOutOfScacco));
+									Undo_Scacco()
 								}
 								else
 								{
-									//global.scacco=false;
+									set_console(+string(global.W_ScaccoKing.Piece_ID)+string(global.W_ScaccoKing.Color))
+									global.scacco=false;
 									WOutOfScacco=true;
 									set_console("WOOS true"+string(WOutOfScacco));
 									global.W_ScaccoKing=noone;
+									Undo_Scacco()
 								}
 							}
 						}
@@ -380,13 +391,13 @@ case 2: // Scacco
 							set_console("404 WKing not found");
 						}
 
-						set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Action) +string(BoardPos));
+						//set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Action) +string(BoardPos));
 			
 						reset_cells_state();
 			
 						}
 
-				}
+				
 
 			#endregion
 
@@ -498,43 +509,44 @@ case 2: // Scacco
 			//TODO: GDFix
 			#region
 			
-			if (global.scacco = 1)
-			{
-				//undo the move
-				if (!BOutOfScacco and !WOutOfScacco)
-				{
-					with (global.Undo_Cell)
-					{
-						Color = global.Undo_Color
-						Piece_ID = global.Undo_ID
-					}
-					with (global.Prev_Cell)
-					{
-						Color = global.Cell_Color;
-						Piece_ID = global.Piece_Index;
-					}
+			//if (global.scacco = 1)
+			//{
+			//	set_console("here we go")
+			//	//undo the move
+			//	if (BOutOfScacco=false or WOutOfScacco=false)
+			//	{
+			//		with (global.Undo_Cell)
+			//		{
+			//			Color = global.Undo_Color
+			//			Piece_ID = global.Undo_ID
+			//		}
+			//		with (global.Prev_Cell)
+			//		{
+			//			Color = global.Cell_Color;
+			//			Piece_ID = global.Piece_Index;
+			//		}
 				
-				set_console("Revert last move");
+			//	set_console("Revert last move");
 				
-				global.player = global.player;
+			//	global.player = global.player;
 				
-				}
-				else
-				{
-					global.scacco=0;
-					global.mode=0;
-					global.player= - global.player;
-				}
-			}
-			else
-			{
-				//setting to common moves
-				global.mode = 0
-				global.player = -global.player;
-				//TODO: Delete doublecheck
-				set_console("You re out of scacco")
-			}
-			#endregion
+			//	}
+			//	else
+			//	{
+			//		global.scacco=0;
+			//		global.mode=0;
+			//		global.player= - global.player;
+			//	}
+			//}
+			//else
+			//{
+			//	//setting to common moves
+			//	global.mode = 0
+			//	global.player = -global.player;
+			//	//TODO: Delete doublecheck
+			//	set_console("You re out of scacco")
+			//}
+			//#endregion
 
 
 			
@@ -576,5 +588,5 @@ case 2: // Scacco
 			
 break;
 #endregion
-
+#endregion
 }

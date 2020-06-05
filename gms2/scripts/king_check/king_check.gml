@@ -7,11 +7,12 @@ with (Returned)
 
 	if (Color = "Black")
 	{
-		if (W_NotSafe=1 and Piece_ID=5)
+		if (B_NotSafe=1 and Piece_ID=5)
 		{
 			global.scacco = 1
 			global.mode = 2
 			global.B_ScaccoKing=Returned;
+			
 	    }
 	    else
 	    {
@@ -22,7 +23,7 @@ with (Returned)
 	{
 		if (Color = "White")
 	    {
-			if (B_NotSafe=1 and Piece_ID=5)
+			if (W_NotSafe=1 and Piece_ID=5)
 	        {
 				global.scacco = 1;
 				global.mode = 2

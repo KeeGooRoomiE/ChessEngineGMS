@@ -299,141 +299,6 @@ if argument0=1
 			    };
 			    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 			    {
-			        Returned.W_NotSafe=true
-					king_check();
-			        break
-			    };
-			    if (Returned!=noone)
-			    {
-			       Returned.W_NotSafe=true
-				   king_check();
-			    };
-    
-			    Y+=sprite_height;
-			};
-			#endregion;
-
-			//Up
-			#region
-
-			Returned=0;
-			Y=y-1;
-			while Returned!=noone
-				{
-				Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
-				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
-				{
-					if Returned.Piece_ID!=5
-						{
-						//RReturned.NotSafe=true
-						} 
-						break
-		
-				};
-				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
-				{
-					Returned.W_NotSafe=true 
-					king_check();
-					break
-				};
-				if Returned!=noone
-				{
-					Returned.W_NotSafe=true
-					king_check();
-				};
-				Y-=sprite_height;
-				}
-
-			#endregion
-
-			//Right
-			#region
-
-			Returned=0;
-			X=x+sprite_width+1;
-			while Returned!=noone
-			{
-				Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
-				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
-				{
-					if Returned.Piece_ID!=5
-					{
-					//Returned.NotSafe=true
-					} 
-					break
-				};
-				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
-				{
-					Returned.W_NotSafe=true 
-					king_check();
-					break
-				};
-				if Returned!=noone
-				{
-					Returned.W_NotSafe=true
-					king_check();
-				};
-				X+=sprite_width;
-			}
-
-			#endregion
-
-			//Left
-			#region
-
-			Returned=0;
-			X=x-1;
-			while Returned!=noone
-			{
-				Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
-				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
-				{
-					if Returned.Piece_ID!=5
-					{
-						//Returned.NotSafe=true
-					}
-					break
-				};
-				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
-				{
-					Returned.W_NotSafe=true
-					king_check();
-					break
-				};
-				if Returned!=noone
-				{
-					Returned.W_NotSafe=true
-					king_check();
-				};
-				X-=sprite_width;
-			}
-			#endregion
-			}
-		#endregion
-		if Color = "Black"
-		#region
-			{
-			//Down
-			#region
-
-			Returned=0;
-
-			Y=y+sprite_height+1;
-
-			while (Returned!=noone) 
-			{
-			    Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
-    
-			    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color)
-			    {
-			        if Returned.Piece_ID!=5
-			        {   
-			            //Returned.NotSafe=true
-			        } 
-			        break
-			    };
-			    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
-			    {
 			        Returned.B_NotSafe=true
 					king_check();
 			        break
@@ -538,6 +403,141 @@ if argument0=1
 				if Returned!=noone
 				{
 					Returned.B_NotSafe=true
+					king_check();
+				};
+				X-=sprite_width;
+			}
+			#endregion
+			}
+		#endregion
+		if Color = "Black"
+		#region
+			{
+			//Down
+			#region
+
+			Returned=0;
+
+			Y=y+sprite_height+1;
+
+			while (Returned!=noone) 
+			{
+			    Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
+    
+			    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color)
+			    {
+			        if Returned.Piece_ID!=5
+			        {   
+			            //Returned.NotSafe=true
+			        } 
+			        break
+			    };
+			    if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
+			    {
+			        Returned.W_NotSafe=true
+					king_check();
+			        break
+			    };
+			    if (Returned!=noone)
+			    {
+			       Returned.W_NotSafe=true
+				   king_check();
+			    };
+    
+			    Y+=sprite_height;
+			};
+			#endregion;
+
+			//Up
+			#region
+
+			Returned=0;
+			Y=y-1;
+			while Returned!=noone
+				{
+				Returned=collision_point(x+sprite_width/2,Y,obj_cell,false,true);
+				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
+				{
+					if Returned.Piece_ID!=5
+						{
+						//RReturned.NotSafe=true
+						} 
+						break
+		
+				};
+				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
+				{
+					Returned.W_NotSafe=true 
+					king_check();
+					break
+				};
+				if Returned!=noone
+				{
+					Returned.W_NotSafe=true
+					king_check();
+				};
+				Y-=sprite_height;
+				}
+
+			#endregion
+
+			//Right
+			#region
+
+			Returned=0;
+			X=x+sprite_width+1;
+			while Returned!=noone
+			{
+				Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
+				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
+				{
+					if Returned.Piece_ID!=5
+					{
+					//Returned.NotSafe=true
+					} 
+					break
+				};
+				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
+				{
+					Returned.W_NotSafe=true 
+					king_check();
+					break
+				};
+				if Returned!=noone
+				{
+					Returned.W_NotSafe=true
+					king_check();
+				};
+				X+=sprite_width;
+			}
+
+			#endregion
+
+			//Left
+			#region
+
+			Returned=0;
+			X=x-1;
+			while Returned!=noone
+			{
+				Returned=collision_point(X,y+sprite_height/2,obj_cell,false,true);
+				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color=Color
+				{
+					if Returned.Piece_ID!=5
+					{
+						//Returned.NotSafe=true
+					}
+					break
+				};
+				if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
+				{
+					Returned.W_NotSafe=true
+					king_check();
+					break
+				};
+				if Returned!=noone
+				{
+					Returned.W_NotSafe=true
 					king_check();
 				};
 				X-=sprite_width;

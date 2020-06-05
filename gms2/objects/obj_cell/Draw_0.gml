@@ -32,8 +32,8 @@ if (!global.Debug_Mode)				//if not in debug
 }
 else								//if in debug
 {
-	draw_text_color(x,y,"B_nosafe: "+string(W_NotSafe),c_red,c_red,c_red,c_red,1); //type of pieces
-	draw_text_color(x,y+16,"W_nosafe: "+string(B_NotSafe),c_red,c_red,c_red,c_red,1); //Color 
+	draw_text_color(x,y,"B_nosafe: "+string(B_NotSafe),c_red,c_red,c_red,c_red,1); //type of pieces
+	draw_text_color(x,y+16,"W_nosafe: "+string(W_NotSafe),c_red,c_red,c_red,c_red,1); //Color 
 	draw_text_color(x,y+32,"Moves" +string(Moves),c_red,c_red,c_red,c_red,1);//name of the position
 	draw_text_color(x,y+48,"Passant" +string(Passant),c_red,c_red,c_red,c_red,1);		//number of cell at the board
 	draw_text_color(x,y+64,"Enpass: " +string(Enpass),c_red,c_red,c_red,c_red,1);	//count of moves at this cell

@@ -12,7 +12,8 @@
         "7133a0c1-7c60-4dc8-aa88-23f60411efc0",
         "5a6d2cfe-1285-4381-b235-70d3b168f7a7",
         "064e9871-eba9-4a8f-854e-b8db9e65939b",
-        "e3d8f7f9-58b3-4b4c-a5c7-58cd708c6e19"
+        "e3d8f7f9-58b3-4b4c-a5c7-58cd708c6e19",
+        "bcf8c446-3791-4096-a30f-5801844ba0a7"
     ],
     "filterType": "GMScript",
     "folderName": "Moving",
