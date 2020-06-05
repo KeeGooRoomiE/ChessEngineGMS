@@ -30,31 +30,7 @@ case 0:
 			{
 				image_index=0;
 			
-				if  (CanMove=true)
-				{
-					image_index=5;
-				};
-			
-				if  (CanTake=true)
-				{
-					image_index=4;
-				};
-				if  (Castling_BRight=true) or (Castling_WRight=true) or (Castling_BLeft=true) or (Castling_WLeft=true) or (Passant = 1)
-				{
-					image_index=6;
-				};	
-				if  (W_NotSafe=true) 
-				{
-					image_index=7;
-				};	
-				if  (B_NotSafe=true) 
-				{
-					image_index=8;
-				};	
-				if  (W_NotSafe=true) and (B_NotSafe=true) 
-				{
-					image_index=9;
-				};	
+	
 		
 				//image_index=4*CanMove;
 			}
@@ -153,4 +129,16 @@ case 2: // Scacco
 break;
 #endregion
 
+}
+
+
+if (id=global.B_ScaccoKing)
+{
+	x=x+cos(300/3)*3;
+	y=y+sin(300/3)*3
+}
+else
+{
+	x=xstart;
+	y=ystart;
 }

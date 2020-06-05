@@ -246,6 +246,8 @@ if Piece_ID = 2
 
 		Y=y-sprite_height*1.5;
 		X=x+sprite_width*1.5;
+		//debug_x_check = X
+		//debug_y_check = Y
 
 		    Returned=collision_point(X,Y,obj_cell,false,true);
     

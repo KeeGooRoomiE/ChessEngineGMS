@@ -1,0 +1,1 @@
+draw_circle_color(x,y,64,c_blue,c_blue,0)

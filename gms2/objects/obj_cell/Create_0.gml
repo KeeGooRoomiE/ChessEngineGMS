@@ -1,5 +1,14 @@
 /// @descr Init values
    
+   //TODO: 
+   //check target positions by drawing line
+   //check scacco positions
+   //1. Check king_check() script
+   //2. Check all pieces move scripts argument 1 (like  pawn_move_check(1) )
+   
+	debug_x_check=x;
+	debug_y_check=y;
+   
 	ID = 0;
 	Color = "White";
 	Piece_ID=-1;

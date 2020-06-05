@@ -16,7 +16,10 @@ global.mode = 0;
 
 global.player = 1
 
-global.scacco = 0
+global.scacco = 0;
+
+//[DEBUG]
+global.CheckingCellDebug=noone;
 
 localScaccoCheck = 0
 
