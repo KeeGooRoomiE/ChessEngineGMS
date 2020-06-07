@@ -1,7 +1,8 @@
 //check if king is ok
-//with (obj_cell)
-//{
+
 global.CheckingCellDebug=Returned;
+
+if argument0 = 0
 
 with (Returned)
 {
@@ -14,30 +15,32 @@ with (Returned)
 			{
 				global.scacco = 1
 				global.mode = 2
-				global.B_ScaccoKing=Returned;
-				set_console(string(Returned.Piece_ID));
+				global.check = "Black"
+				where_king(0)
+				
 			}
 		}
 	    else
-	    {
-			//global.scacco=0;
-	    }
-	}
-	else
-	{
-		if (Color = "White")
-	    {
-			if (W_NotSafe=1 and Piece_ID=5)
-	        {
-				global.scacco = 1;
-				global.mode = 2
-				global.W_ScaccoKing=Returned;
-	        }
-	        else
-	        {
-	            //global.scacco=0;
-	        }
-	    }
+	    {}
 	}
 }
-//}
+
+with (Returned)
+{
+if argument0 = 1
+	{
+		if (Color = "White")
+		{
+			if (W_NotSafe=1 and Piece_ID=5)
+		    {
+				global.scacco = 1;
+				global.mode = 2
+				global.check = "White"
+				where_king(1)
+				
+		    }
+		    else
+		    {}
+		}
+	}
+}

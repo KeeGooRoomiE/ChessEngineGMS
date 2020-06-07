@@ -11,3 +11,6 @@ with (obj_cell)
 	W_NotSafe = 0
 	B_NotSafe = 0
 }
+
+
+

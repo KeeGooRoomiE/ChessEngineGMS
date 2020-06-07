@@ -217,7 +217,7 @@ if argument0 = 1
 					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 					//{
 						Returned.W_NotSafe=true;
-						king_check();
+						king_check(1);
 					//}
 				}
 				#endregion;
@@ -230,7 +230,7 @@ if argument0 = 1
 					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 					//{
 						Returned.W_NotSafe=true;
-						king_check();
+						king_check(1);
 					//}
 		
 				}
@@ -238,7 +238,7 @@ if argument0 = 1
 				
 			// en_passant
 			#region
-			//en_passant(3)
+			en_passant(3)
 			#endregion
 			
 			}			 
@@ -257,7 +257,7 @@ if argument0 = 1
 					//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 					//{
 						Returned.B_NotSafe=true;
-						king_check();
+						king_check(0);
 					//}
 				}
 			#endregion
@@ -270,14 +270,15 @@ if argument0 = 1
 						//if (Returned.Piece_ID!=-1 and Returned.Color!=Color)
 						//{
 							Returned.B_NotSafe=true;
-							king_check();
+							king_check(0);
 						//}
 					}
 				#endregion
 				
 			// en_passant
 			#region
-			//en_passant(4)
+			en_passant(4)
+			
 			#endregion
 			}
 			#endregion

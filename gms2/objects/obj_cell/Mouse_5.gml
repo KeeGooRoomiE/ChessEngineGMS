@@ -5,7 +5,7 @@ switch (global.mode)
 case 0: // Regolar Game
 #region
 
-		global.Selected=ID;
+			global.Selected=ID;
 
 			//Move and Take
 			#region
@@ -28,50 +28,49 @@ case 0: // Regolar Game
 							{
 							if CanTake = true
 								{
-								Color = global.Cell_Color;
-								Piece_ID = global.Piece_Index;
-								take=true
-								image_index = 0
-								Moves++;
-								Action = ":"
+									Color = global.Cell_Color;
+									Piece_ID = global.Piece_Index;
+									take=true
+									image_index = 0
+									Moves++;
+									Action = ":"
 								}
 							}
 						else if (Color = "Black" && global.Cell_Color = "White")
 							{
 							if CanTake = true
 								{	
-								Color = global.Cell_Color;
-								Piece_ID = global.Piece_Index;
-								take=true
-								image_index = 0
-								Moves++;
-								Action = ":"
-					
+									Color = global.Cell_Color;
+									Piece_ID = global.Piece_Index;
+									take=true
+									image_index = 0
+									Moves++;
+									Action = ":"			
 								}
 							}
 		
 						if (take = true)
 						{
 							with (global.Prev_Cell)
-							{
-								Color="Grey";
-								Piece_ID=-1;
-								image_index = 0;
-								global.player = global.player*-1
-								Moves++;
-							}
+								{
+									Color="Grey";
+									Piece_ID=-1;
+									image_index = 0;
+									global.player = global.player*-1
+									Moves++;
+									if Enpass = 1
+									{
+										Enpass++
+									}
+								}
+
 						global.Next = BoardPos
 			
 						//drowing_move(mouse_x,mouse_y, "Move: "+ string(Color) +string(Piece_ID) +string(global.Prev) +string(BoardPos),c_black,1)
-			
 
 						set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Action) +string(BoardPos));
-
-			
 						reset_cells_state();
-			
 						}
-
 				}
 
 			#endregion
@@ -245,9 +244,22 @@ case 0: // Regolar Game
 						Color = "Grey"
 						}	
 					}
+			global.player = global.player *-1
 			}
 
 			#endregion
+			
+			//En Passant Enpass variable ++
+			#region
+			with (obj_cell)
+			{
+				if Enpass = 1
+					{
+						Enpass++
+					}
+			}
+			#endregion
+			
 break;
 #endregion
 
@@ -269,12 +281,15 @@ break;
 #endregion
 
 case 2: // Scacco
-#region
-		
+#region		
+
+			// Set Undo Variables
+			#region
 			global.Selected=ID;
 			global.Undo_Color = Color
 			global.Undo_ID = Piece_ID
 			global.Undo_Cell = id
+			#endregion
 
 			//Move and Take
 			#region
@@ -291,6 +306,7 @@ case 2: // Scacco
 						take=true
 						image_index = 0
 						Moves++;
+						set_console("mosso in empty")
 					}
 				}
 				else if (Color = "White" && global.Cell_Color = "Black")
@@ -327,77 +343,14 @@ case 2: // Scacco
 								Piece_ID=-1;
 								image_index = 0;
 								Moves++;
+								set_console("mosso e preso")
 								//global.player = global.player*-1
 							}
 						
 						global.Next = BoardPos
 						}
-						
-						//Check black king to sucsessful out of scacco
-						
-						if (global.B_ScaccoKing != noone)
-						{
-							with (global.B_ScaccoKing)
-							{
-								if (B_NotSafe = 1)
-								{
-									
-									BOutOfScacco=false;
-									set_console("BOOS false: "+string(BOutOfScacco));
-									Undo_Scacco()
-									
-								}
-								else
-								{
-									set_console(+string(global.B_ScaccoKing.Piece_ID)+string(global.B_ScaccoKing.Color))
-									global.scacco=false;
-									BOutOfScacco=true;
-									set_console("BOOS true"+string(BOutOfScacco));
-									global.B_ScaccoKing=noone;
-									Undo_Scacco()
-								}
-							}
-						}
-						else
-						{
-							set_console("404 BKing not found");
-						}
-						
-						//For the white too ^(upper code)
-						if (global.W_ScaccoKing != noone)
-						{
-							with(global.W_ScaccoKing)
-							{
-								if (W_NotSafe=1)
-								{
-									set_console(+string(global.W_ScaccoKing.Piece_ID)+string(global.W_ScaccoKing.Color))
-									WOutOfScacco=false;
-									set_console("WOOS false"+string(WOutOfScacco));
-									Undo_Scacco()
-								}
-								else
-								{
-									set_console(+string(global.W_ScaccoKing.Piece_ID)+string(global.W_ScaccoKing.Color))
-									global.scacco=false;
-									WOutOfScacco=true;
-									set_console("WOOS true"+string(WOutOfScacco));
-									global.W_ScaccoKing=noone;
-									Undo_Scacco()
-								}
-							}
-						}
-						else
-						{
-							set_console("404 WKing not found");
-						}
-
-						//set_console(+string(global.Piece_Data[Piece_ID,1])+string(global.Prev)+string(Action) +string(BoardPos));
-			
-						reset_cells_state();
-			
-						}
-
-				
+			}	
+			//reset_cells_state();
 
 			#endregion
 
@@ -439,6 +392,7 @@ case 2: // Scacco
 
 			//Castling White
 			#region
+			
 			if Castling_W = 1
 				{
 				if (Piece_ID = 5 && Color = "White")
@@ -503,90 +457,84 @@ case 2: // Scacco
 
 			#endregion
 			
-						
-			// if still scacco than Undo
+			reset_cells_state()
 			
-			//TODO: GDFix
+			//Check king out of scacco
 			#region
 			
-			//if (global.scacco = 1)
-			//{
-			//	set_console("here we go")
-			//	//undo the move
-			//	if (BOutOfScacco=false or WOutOfScacco=false)
-			//	{
-			//		with (global.Undo_Cell)
-			//		{
-			//			Color = global.Undo_Color
-			//			Piece_ID = global.Undo_ID
-			//		}
-			//		with (global.Prev_Cell)
-			//		{
-			//			Color = global.Cell_Color;
-			//			Piece_ID = global.Piece_Index;
-			//		}
+				//Black
+				#region	
 				
-			//	set_console("Revert last move");
-				
-			//	global.player = global.player;
-				
-			//	}
-			//	else
-			//	{
-			//		global.scacco=0;
-			//		global.mode=0;
-			//		global.player= - global.player;
-			//	}
-			//}
-			//else
-			//{
-			//	//setting to common moves
-			//	global.mode = 0
-			//	global.player = -global.player;
-			//	//TODO: Delete doublecheck
-			//	set_console("You re out of scacco")
-			//}
-			//#endregion
 
-
+				with (obj_cell)
+				{
+					knight_move_check(1)
+					pawn_move_check(1)
+					rook_move_check(1)
+					bishop_move_check(1)
+					queen_move_check(1)
+					king_move_check(1)
+				}
+				if (global.B_ScaccoKing != noone)
+				{
+					with (global.B_ScaccoKing)
+					{	
+						if (global.B_ScaccoKing.B_NotSafe = 1)
+						{			
+							BOutOfScacco=false;
+							set_console("BOOS false: "+string(BOutOfScacco));
+							Undo_Scacco(0)							
+						}
+						else
+						{									
+							global.scacco=false;
+							BOutOfScacco=true;
+							set_console("BOOS true"+string(BOutOfScacco));
+							global.B_ScaccoKing=noone;
+							Undo_Scacco(0)
+						}
+					}
+				}
+				else
+				{
+					set_console("404 BKing not found");
+				}
 			
-			//Check if still scacco
-			#region
-			
-			//with (obj_cell)
-			//{
+				#endregion
+				
+				//White
+				#region
+				
+				if (global.W_ScaccoKing != noone)
+				{
+					with(global.W_ScaccoKing)
+					{
+						if (W_NotSafe=1)
+						{
+							set_console(+string(global.W_ScaccoKing.Piece_ID)+string(global.W_ScaccoKing.Color))
+							WOutOfScacco=false;
+							set_console("WOOS false"+string(WOutOfScacco));
+							Undo_Scacco(1)
+						}
+						else
+						{
+							set_console(+string(global.W_ScaccoKing.Piece_ID)+string(global.W_ScaccoKing.Color))
+							global.scacco=false;
+							WOutOfScacco=true;
+							set_console("WOOS true"+string(WOutOfScacco));
+							global.W_ScaccoKing=noone;
+							Undo_Scacco(1)
+						}
+					}
+				}
+				else
+				{
+					set_console("404 WKing not found");
+				}
+				#endregion
 
-			//	if (Color = "Black")
-			//	{
-			//		if (W_NotSafe=1 and Piece_ID=5)
-			//		{
-			//			global.scacco = 1
-			//	    }
-			//	    else
-			//	    {
-			//			global.scacco = 0;
-			//			global.mode = 0
-			//	    }
-			//	}
-			//	else
-			//	{
-			//		if (Color = "White")
-			//	    {
-			//			if (B_NotSafe=1 and Piece_ID=5)
-			//	        {
-			//				global.scacco = 1;	
-			//			}
-			//	     }
-			//	     else
-			//		{
-			//	        global.scacco = 0;
-			//			global.mode = 0
-			//	    }
-			//	}
-			//}
 			#endregion
 			
-break;
-#endregion
+break;			
 #endregion
 }

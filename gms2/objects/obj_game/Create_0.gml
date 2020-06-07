@@ -18,6 +18,11 @@ global.player = 1
 
 global.scacco = 0;
 
+global.scaccomatto = 0
+
+global.check = "Grey"
+
+
 //[DEBUG]
 global.CheckingCellDebug=noone;
 

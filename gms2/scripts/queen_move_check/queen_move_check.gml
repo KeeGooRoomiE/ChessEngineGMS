@@ -301,13 +301,13 @@ if argument0=1
 			if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 			{
 			    Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			    break
 			};
 			if (Returned!=noone)
 			{
 			    Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
     
 			Y+=sprite_height;
@@ -340,13 +340,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y+=sprite_height;
 			X-=sprite_height;
@@ -376,13 +376,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y-=sprite_height;
 			X+=sprite_height;
@@ -412,13 +412,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y-=sprite_height;
 			X-=sprite_height;
@@ -447,13 +447,13 @@ if argument0=1
 			if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 			{
 			    Returned.B_NotSafe=
-				king_check();
+				king_check(0);
 			    break
 			};
 			if (Returned!=noone)
 			{
 			    Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
     
 			Y+=sprite_height;
@@ -480,13 +480,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y-=sprite_height;
 			}
@@ -512,13 +512,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			X+=sprite_width;
 		}
@@ -544,13 +544,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.B_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			X-=sprite_width;
 		}
@@ -583,13 +583,13 @@ if argument0=1
 			if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 			{
 			    Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			    break
 			};
 			if (Returned!=noone)
 			{
 			    Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
     
 			Y+=sprite_height;
@@ -622,13 +622,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y+=sprite_height;
 			X-=sprite_height;
@@ -658,13 +658,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y-=sprite_height;
 			X+=sprite_height;
@@ -694,13 +694,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y-=sprite_height;
 			X-=sprite_height;
@@ -729,13 +729,13 @@ if argument0=1
 			if (Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color)
 			{
 			    Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			    break
 			};
 			if (Returned!=noone)
 			{
 			    Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
     
 			Y+=sprite_height;
@@ -762,13 +762,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			Y-=sprite_height;
 			}
@@ -794,13 +794,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			X+=sprite_width;
 		}
@@ -826,13 +826,13 @@ if argument0=1
 			if Returned!=noone and Returned.Piece_ID!=-1 and Returned.Color!=Color
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 				break
 			};
 			if Returned!=noone
 			{
 				Returned.W_NotSafe=true
-				king_check();
+				king_check(0);
 			};
 			X-=sprite_width;
 		}

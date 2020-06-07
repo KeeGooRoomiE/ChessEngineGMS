@@ -130,15 +130,3 @@ break;
 #endregion
 
 }
-
-
-if (id=global.B_ScaccoKing)
-{
-	x=x+cos(300/3)*3;
-	y=y+sin(300/3)*3
-}
-else
-{
-	x=xstart;
-	y=ystart;
-}

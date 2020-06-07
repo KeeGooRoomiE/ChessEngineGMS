@@ -1,10 +1,13 @@
-//script_execute(s_controller_step_GML);
+
+switch (global.mode)
+{
+case 0:
+#region
 
 mouse_string=global.Selected;
 
-//king_check()
-
 //Check for a changes in a King safety one time per situation
+#region
 if (global.scacco!=localScaccoCheck)
 {
 	//if it maded not safe
@@ -19,6 +22,7 @@ if (global.scacco!=localScaccoCheck)
 		localScaccoCheck=global.scacco;
 	}
 }
+#endregion
 
 if (!instance_exists(obj_ai))
 {
@@ -27,3 +31,30 @@ if (!instance_exists(obj_ai))
 
 
 //keyboard_check_released(vk_space) = !global.Debug_Mode;
+break;
+#endregion
+
+case 1:
+break;
+
+case 2:
+#region
+if global.check = "White"
+{
+	check_win(0)
+}
+
+if global.check = "Black"
+{
+	check_win(1)
+}
+break;
+#endregion
+
+}
+
+
+
+
+
+
