@@ -1,6 +1,6 @@
 // Pawn change
 
-if (global.mode != 2)
+if (global.mode = 0)
 {
 	if Piece_ID=0 
 		{
