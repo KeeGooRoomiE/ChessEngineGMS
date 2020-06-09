@@ -2,16 +2,7 @@
 
   ///  global.Check=""; //Colour that is in check.
   ///  global.Selected=-1; //This variable represents what piece on the board is currently selected by the player.
-  ///  global.Turn="White";//Sets the colour that starts first.
-    
-    
-     WhiteKing=0;
-     BlackKing=0;
-     White=0;
-     Black=0;
-     //Setup variables for step event.
-     
-    Win_Text="";
+  ///  global.Turn="White";//Sets the colour that starts first.   
     
     //If the winning text is anything other than "", it will be shown to the player.
     var P=0;

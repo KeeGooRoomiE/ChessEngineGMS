@@ -2,6 +2,29 @@
 
 switch (global.mode)
 {
+	
+case -1:
+#region
+
+if global.take = 1
+	{
+	global.Selected=ID;
+	global.Change_Color = Color;
+	global.Change_ID = Piece_ID;
+	Color = global.Cell_Color;
+	Piece_ID = global.Piece_Index;
+	global.take = 0
+	with (global.Prev)
+		{
+			Color = global.Change_Color
+			Piece_ID = global.Change_ID
+		}
+	}
+
+
+break;
+#endregion
+
 case 0: // Regolar Game
 #region
 

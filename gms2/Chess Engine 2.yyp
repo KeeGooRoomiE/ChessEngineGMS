@@ -183,6 +183,22 @@
             }
         },
         {
+            "Key": "2743dd6e-6f1d-4aa0-8c2d-e6ea8369ed92",
+            "Value": {
+                "id": "60fe9e6b-ad92-41cd-b176-849c1898e77d",
+                "resourcePath": "sprites\\sprite17\\sprite17.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "27e452ac-6d2a-4459-9f08-9155e272779c",
+            "Value": {
+                "id": "e7873d24-a3b9-47b4-82b1-d8b43e18682a",
+                "resourcePath": "sprites\\go_to_game\\go_to_game.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2ded20b7-aa7a-44bd-9012-cdf26a766c7b",
             "Value": {
                 "id": "fb297fd2-d272-4bb7-a5a1-65cc642aa19a",
@@ -567,11 +583,27 @@
             }
         },
         {
+            "Key": "afaa9185-8392-41b0-a4b2-22bcccdff01f",
+            "Value": {
+                "id": "e68a9d8f-3ee9-4d6a-9d30-604b2a2872c0",
+                "resourcePath": "sprites\\sprite16\\sprite16.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "afc7cea0-a363-41bd-a815-4e1e82a51d8c",
             "Value": {
                 "id": "c1e084d5-c81a-43d7-a594-9853a017034f",
                 "resourcePath": "sprites\\sprite83\\sprite83.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b4b10738-6b02-4341-b3c4-864e3a62a7f1",
+            "Value": {
+                "id": "030488c4-87ac-4753-ad45-b401bb983007",
+                "resourcePath": "scripts\\s_custom_GML1\\s_custom_GML1.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -668,6 +700,14 @@
                 "id": "c503f094-cd3b-4b01-bd16-57cc6eb883a7",
                 "resourcePath": "notes\\compatibility_report_140420_1859145914.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "d60633a6-7b00-4bde-be0d-a25b0c0daa89",
+            "Value": {
+                "id": "cc5cec5b-6fbd-4c32-995a-1c3388b521cf",
+                "resourcePath": "objects\\obj_go_to_game\\obj_go_to_game.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -779,6 +819,7 @@
         "00f1bd55-a977-4b37-999d-dfc3ff832871",
         "89253568-f200-4e27-8ea7-32e0a8b565c5",
         "1968e2f5-b634-4cda-a38f-0e190f7f12df",
+        "b4b10738-6b02-4341-b3c4-864e3a62a7f1",
         "e1444df6-28d9-4e14-b2db-b79ca304447b",
         "94d03139-9acb-460d-bbd5-0702d0d73c30",
         "8f573cfb-7130-46d7-adcb-cba5b0ae3570",

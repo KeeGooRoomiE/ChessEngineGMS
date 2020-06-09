@@ -2,6 +2,20 @@
 
 switch (global.mode)
 {
+	
+case -1:
+#region
+
+global.Selected=ID;
+global.Cell_Color=Color;
+global.Piece_Index=Piece_ID;
+global.Prev = id
+global.take = 1
+						
+break;
+#endregion
+
+
 case 0: // Regolar Game
 #region
 		if (global.PlayerTurn = global.player)

@@ -1,3 +1,57 @@
+switch (global.mode)
+{
+#region
+
+case -1:
+#region
+
+s_piece_data()
+
+s_custom_GML1()
+
+
+global.Selected = 0;
+
+global.Debug_Mode = 0;
+
+global.Cell_Color = "Grey";
+
+global.Piece_Index = -1;
+
+global.Prev_Cell = 0;
+
+global.player = 1
+
+global.scacco = 0;
+
+global.scaccomatto = 0
+
+global.check = "Grey"
+
+
+//[DEBUG]
+global.CheckingCellDebug=noone;
+
+localScaccoCheck = 0
+
+mouse_string="";
+
+//trigger(set to true\false) variable global.Debug_Mode when we press Space button
+
+camera_size=512;
+
+view_wport[0]=camera_size;
+view_hport[0]=camera_size;
+
+store_moves[0]=0;
+moves_counter=0;
+
+break;
+#endregion
+
+case 0:
+#region
+
 script_execute(s_piece_data);
 
 script_execute(s_create_GML);
@@ -58,6 +112,20 @@ moves_counter=0;
 	//store_moves[i]="";
 	//moves_counter=i;
 //}
+
+
+break;
+#endregion
+
+
+
+
+#endregion
+}
+
+
+
+
 
 
 
