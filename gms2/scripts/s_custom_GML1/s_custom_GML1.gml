@@ -130,11 +130,12 @@
 		         //case 63:   BoardPiece.Piece_ID=1;
 		         //           BoardPiece.Color="White";
 		         //           break;                        //Create white Rooks 
-				 default:    BoardPiece.Piece_ID = -1;
+				 default:   BoardPiece.Piece_ID = -1;
 							BoardPiece.Color = "Grey";
 							break;
-			     case 64:    BoardPiece.Piece_ID=1;
+			     case 64:   BoardPiece.Piece_ID=1;
 		                    BoardPiece.Color="Black";
+							global.p64 = BoardPiece
 		                    break;                       //Create black Rooks
 		         case 65:    BoardPiece.Piece_ID=2;
 		                    BoardPiece.Color="Black";
