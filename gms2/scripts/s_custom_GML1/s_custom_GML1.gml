@@ -48,91 +48,92 @@
 			
 			switch (BoardPiece.ID)
 		    {
-				 //case 0:    BoardPiece.Piece_ID=1;
-		         //           BoardPiece.Color="Black";
-		         //           break;                       //Create black Rooks
-		         //case 1:    BoardPiece.Piece_ID=2;
-		         //           BoardPiece.Color="Black";
-		         //           break;                        //Create black knight
-		         //case 2:    BoardPiece.Piece_ID=3;
-		         //           BoardPiece.Color="Black";    //Create black bishop
-		         //           break; 
-		         //case 3:    BoardPiece.Piece_ID=4;
-		         //           BoardPiece.Color="Black";    //Crate black king
-		         //           break;  
-		         //case 4:    BoardPiece.Piece_ID=5;
-		         //           BoardPiece.Color="Black";    //Crate black queen
-		         //           break; 
-		         //case 5:    BoardPiece.Piece_ID=3;
-		         //           BoardPiece.Color="Black";    //Create black bishop
-		         //           break;
-		         //case 6:    BoardPiece.Piece_ID=2;
-		         //           BoardPiece.Color="Black";    //Create black knight
-		         //           break;   
-		         //case 7:    BoardPiece.Piece_ID=1;
-		         //           BoardPiece.Color="Black";
-		         //           break;                        //Create black Rooks
-		         //case 8:    BoardPiece.Piece_ID=0;        //Create pawns
-					//		BoardPiece.Color="Black";
-		         //case 9:    BoardPiece.Piece_ID=0;        //from there
-					//	    BoardPiece.Color="Black";
-		         //case 10:   BoardPiece.Piece_ID=0;
-				 //			BoardPiece.Color="Black";
-		         //case 11:   BoardPiece.Piece_ID=0;
-				 //			BoardPiece.Color="Black";
-		         //case 12:   BoardPiece.Piece_ID=0;
-				 //			BoardPiece.Color="Black";
-		         //case 13:   BoardPiece.Piece_ID=0;
-				 //			BoardPiece.Color="Black";
-		         //case 14:   BoardPiece.Piece_ID=0;       //to there
-				 //			BoardPiece.Color="Black";
-		         //case 15:   BoardPiece.Piece_ID=0; 
-				 //			BoardPiece.Color="Black";
-					//		break;
-		         //case 48:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Colour="White";        //Create pawns
-		         //case 49:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Color="White";        //from there
-		         //case 50:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Color="White";
-		         //case 51:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Color="White";
-		         //case 52:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Color="White";
-		         //case 53:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Color="White";
-		         //case 54:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Color="White";       //to there
-		         //case 55:   BoardPiece.Piece_ID=0;
-		         //           BoardPiece.Color="White"; 
-		         //           break;
-		         //case 56:   BoardPiece.Piece_ID=1;
-		         //           BoardPiece.Color="White";  //Create white rook
-		         //           break;
-		         //case 57:   BoardPiece.Piece_ID=2;
-		         //           BoardPiece.Color="White";
-		         //           break;                        //Create white knight
-		         //case 58:   BoardPiece.Piece_ID=3;
-		         //           BoardPiece.Color="White";    //Create white bishop
-		         //           break;
-		         //case 59:   BoardPiece.Piece_ID=4;
-		         //           BoardPiece.Color="White";    //Crate white king
-		         //           break;  
-		         //case 60:   BoardPiece.Piece_ID=5;
-		         //           BoardPiece.Color="White";    //Crate white queen
-		         //           break; 
-		         //case 61:   BoardPiece.Piece_ID=3;
-		         //           BoardPiece.Color="White";    //Create white bishop
-		         //           break;
-		         //case 62:   BoardPiece.Piece_ID=2;
-		         //           BoardPiece.Color="White";    //Create white knight
-		         //           break;   
-		         //case 63:   BoardPiece.Piece_ID=1;
-		         //           BoardPiece.Color="White";
-		         //           break;                        //Create white Rooks 
-				 default:   BoardPiece.Piece_ID = -1;
-							BoardPiece.Color = "Grey";
+				 case 0:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+							BoardPiece.ID = 0
+		                    break;                       //Create black Rooks
+		         case 1:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+							BoardPiece.ID = 1
+		                    break;                        //Create black knight
+		         case 2:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Create black bishop
+		                    BoardPiece.ID = 2
+							break; 
+		         case 3:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Crate black king
+		                    break;  
+		         case 4:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Crate black queen
+		                    break; 
+		         case 5:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Create black bishop
+		                    break;
+		         case 6:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Create black knight
+		                    break;   
+		         case 7:    BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+		                    break;                        //Create black Rooks
+		         case 8:    BoardPiece.Piece_ID=-1;        //Create pawns
+							BoardPiece.Color="Grey";
+		         case 9:    BoardPiece.Piece_ID=-1;        //from there
+						    BoardPiece.Color="Grey";
+		         case 10:   BoardPiece.Piece_ID=-1;
+				 			BoardPiece.Color="Grey";
+		         case 11:   BoardPiece.Piece_ID=-1;
+				 			BoardPiece.Color="Grey";
+		         case 12:   BoardPiece.Piece_ID=-1;
+				 			BoardPiece.Color="Grey";
+		         case 13:   BoardPiece.Piece_ID=-1;
+				 			BoardPiece.Color="Grey";
+		         case 14:   BoardPiece.Piece_ID=-1;       //to there
+				 			BoardPiece.Color="Grey";
+		         case 15:   BoardPiece.Piece_ID=-1; 
+				 			BoardPiece.Color="Grey";
 							break;
+		         case 48:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Colour="Grey";        //Create pawns
+		         case 49:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";        //from there
+		         case 50:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+		         case 51:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+		         case 52:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+		         case 53:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+		         case 54:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";       //to there
+		         case 55:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey"; 
+		                    break;
+		         case 56:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";  //Create white rook
+		                    break;
+		         case 57:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+		                    break;                        //Create white knight
+		         case 58:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Create white bishop
+		                    break;
+		         case 59:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Crate white king
+		                    break;  
+		         case 60:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Crate white queen
+		                    break; 
+		         case 61:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Create white bishop
+		                    break;
+		         case 62:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";    //Create white knight
+		                    break;   
+		         case 63:   BoardPiece.Piece_ID=-1;
+		                    BoardPiece.Color="Grey";
+		                    break;                        //Create white Rooks 
+				 
 			     case 64:   BoardPiece.Piece_ID=1;
 		                    BoardPiece.Color="Black";
 							global.p64 = BoardPiece
@@ -216,6 +217,9 @@
 		         case 95:   BoardPiece.Piece_ID=1;
 		                    BoardPiece.Color="White";
 		                    break;                        //Create white Rooks
+				default:	BoardPiece.Piece_ID = -1;
+							BoardPiece.Color = "Grey";
+							break;
 			}						
 			P++;
 			X=i*111;

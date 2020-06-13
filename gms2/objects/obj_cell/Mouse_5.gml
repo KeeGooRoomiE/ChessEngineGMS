@@ -21,6 +21,29 @@ if global.take = 1
 		}
 	}
 
+with (obj_cell)
+{
+	if Piece_ID = 5 and Color = "White"
+	{
+		if ID>=0 and ID<=63
+		{
+		global.WKing = 1
+		}
+	}
+	if Piece_ID = 5 and Color = "Black"
+		{
+			if ID>=0 and ID<=63
+			{
+			global.BKing = 1
+			}
+		}
+}
+
+if global.WKing = 1 and global.BKing = 1
+	{
+	global.Gotogame = 1
+	}
+
 
 break;
 #endregion
@@ -283,6 +306,25 @@ case 0: // Regolar Game
 			}
 			#endregion
 			
+			// Check Win
+			
+			pawn_move_check(1)
+			rook_move_check(1)
+			knight_move_check(1)
+			bishop_move_check(1)
+			queen_move_check(1)
+			king_move_check(1)
+			
+			if Color = "White"
+			{
+				check_win(1)
+			
+			
+			if Color = "Black"
+			{
+				check_win(0)
+			}
+		
 break;
 #endregion
 

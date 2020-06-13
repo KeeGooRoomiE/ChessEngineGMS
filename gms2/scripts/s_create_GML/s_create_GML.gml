@@ -1,8 +1,4 @@
 ///Init board pieces and vars
-
-  ///  global.Check=""; //Colour that is in check.
-  ///  global.Selected=-1; //This variable represents what piece on the board is currently selected by the player.
-  ///  global.Turn="White";//Sets the colour that starts first.   
     
     //If the winning text is anything other than "", it will be shown to the player.
     var P=0;
@@ -11,9 +7,7 @@
 	var CharForCell="A";
 	var NumForCell=0;
 	var Cell_Position = "";
-    
-    
-	
+
 	//check for a proper setting inside of the cell by using a s_output_mesage
 	for (i=0; i<8; i++) //cell collumns 
 	{
@@ -137,7 +131,6 @@
 							BoardPiece.Color = "Grey";
 							break;
 			}
-							
 			P++;
 			X=i*111;
 			Y=j*111;

@@ -55,7 +55,7 @@ if argument0=1
 
 if global.scacco = 1
 {
-	with (obj_cell) // Check if Black Win
+	with (obj_cell) 
 	{
 		for (ID=0; ID=63; ID++)
 		{
@@ -76,7 +76,7 @@ if global.scacco = 1
 							queen_move_check(1)
 							king_move_check(1)
 						}
-					if global.scacco = 0
+					if global.scacco = 1
 						{
 							global.scaccomatto = 1
 						}

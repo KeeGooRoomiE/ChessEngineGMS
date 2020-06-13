@@ -51,15 +51,13 @@ case -1:
 	
 	global.B_ScaccoKing=noone;
 	global.W_ScaccoKing=noone;
+	
+	global.BKing = 0
+	global.WKing = 0
+	global.Gotogame = 0
 
 	global.check_color = "Grey"
 	global.check_ID = -1
-	
-	
-    NotSafeAggressor=noone;
-	Protected=false;
-    
-	isSelectingPiece=false;
 
 break;
 #endregion
@@ -112,12 +110,6 @@ case 0:
 
 	global.check_color = "Grey"
 	global.check_ID = -1
-	
-	
-    NotSafeAggressor=noone;
-	Protected=false;
-    
-	isSelectingPiece=false;
 
 break;
 #endregion
